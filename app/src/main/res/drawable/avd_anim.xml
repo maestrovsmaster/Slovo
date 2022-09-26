@@ -1,0 +1,1920 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="184dp"
+            android:height="184dp"
+            android:viewportWidth="184"
+            android:viewportHeight="184">
+            <group android:name="group_233">
+                <group
+                    android:name="group_86"
+                    android:pivotX="20"
+                    android:pivotY="160">
+                    <group android:name="group_77">
+                        <path
+                            android:name="path_128"
+                            android:pathData="M 16 176 L 16 168 L 24 168 L 24 176 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_129"
+                            android:pathData="M 16.5 175.5 L 16.5 168.5 L 23.5 168.5 L 23.5 175.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_78">
+                        <path
+                            android:name="path_130"
+                            android:pathData="M 16 168 L 16 160 L 24 160 L 24 168 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_131"
+                            android:pathData="M 16.5 167.5 L 16.5 160.5 L 23.5 160.5 L 23.5 167.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_79">
+                        <path
+                            android:name="path_132"
+                            android:pathData="M 0 184 L 0 176 L 8 176 L 8 184 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_133"
+                            android:pathData="M 0.5 183.5 L 0.5 176.5 L 7.5 176.5 L 7.5 183.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_80">
+                        <path
+                            android:name="path_134"
+                            android:pathData="M 8 176 L 8 168 L 16 168 L 16 176 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_135"
+                            android:pathData="M 8.5 175.5 L 8.5 168.5 L 15.5 168.5 L 15.5 175.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_81">
+                        <path
+                            android:name="path_136"
+                            android:pathData="M 0 168 L 0 160 L 8 160 L 8 168 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_137"
+                            android:pathData="M 0.25 167.75 L 0.25 160.25 L 7.75 160.25 L 7.75 167.75 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_82">
+                        <path
+                            android:name="path_138"
+                            android:pathData="M 16 184 L 16 176 L 24 176 L 24 184 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_139"
+                            android:pathData="M 16.5 183.5 L 16.5 176.5 L 23.5 176.5 L 23.5 183.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_83">
+                        <path
+                            android:name="path_140"
+                            android:pathData="M 8 168 L 8 160 L 16 160 L 16 168 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_141"
+                            android:pathData="M 8.5 167.5 L 8.5 160.5 L 15.5 160.5 L 15.5 167.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_84">
+                        <path
+                            android:name="path_142"
+                            android:pathData="M 24 176 L 24 168 L 32 168 L 32 176 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_143"
+                            android:pathData="M 24.5 175.5 L 24.5 168.5 L 31.5 168.5 L 31.5 175.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_85">
+                        <path
+                            android:name="path_144"
+                            android:pathData="M 8 160 L 8 152 L 16 152 L 16 160 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_145"
+                            android:pathData="M 8.5 159.5 L 8.5 152.5 L 15.5 152.5 L 15.5 159.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_97"
+                    android:pivotX="40"
+                    android:pivotY="40">
+                    <group android:name="group_87">
+                        <path
+                            android:name="path_146"
+                            android:pathData="M 24 32 L 32 32 L 32 40 L 24 40 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_147"
+                            android:pathData="M 24.5 32.5 L 31.5 32.5 L 31.5 39.5 L 24.5 39.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_88">
+                        <path
+                            android:name="path_148"
+                            android:pathData="M 32 24 L 40 24 L 40 32 L 32 32 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_149"
+                            android:pathData="M 32.5 24.5 L 39.5 24.5 L 39.5 31.5 L 32.5 31.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_89">
+                        <path
+                            android:name="path_150"
+                            android:pathData="M 32 32 L 40 32 L 40 40 L 32 40 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_151"
+                            android:pathData="M 32.5 32.5 L 39.5 32.5 L 39.5 39.5 L 32.5 39.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_90">
+                        <path
+                            android:name="path_152"
+                            android:pathData="M 40 32 L 48 32 L 48 40 L 40 40 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_153"
+                            android:pathData="M 40.5 32.5 L 47.5 32.5 L 47.5 39.5 L 40.5 39.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_91">
+                        <path
+                            android:name="path_154"
+                            android:pathData="M 48 32 L 56 32 L 56 40 L 48 40 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_155"
+                            android:pathData="M 48.5 32.5 L 55.5 32.5 L 55.5 39.5 L 48.5 39.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_92">
+                        <path
+                            android:name="path_156"
+                            android:pathData="M 32 40 L 40 40 L 40 48 L 32 48 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_157"
+                            android:pathData="M 32.5 40.5 L 39.5 40.5 L 39.5 47.5 L 32.5 47.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_93">
+                        <path
+                            android:name="path_158"
+                            android:pathData="M 32 48 L 40 48 L 40 56 L 32 56 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_159"
+                            android:pathData="M 32.5 48.5 L 39.5 48.5 L 39.5 55.5 L 32.5 55.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_94">
+                        <path
+                            android:name="path_160"
+                            android:pathData="M 40 48 L 48 48 L 48 56 L 40 56 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_161"
+                            android:pathData="M 40.5 48.5 L 47.5 48.5 L 47.5 55.5 L 40.5 55.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_95">
+                        <path
+                            android:name="path_162"
+                            android:pathData="M 48 48 L 56 48 L 56 56 L 48 56 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_163"
+                            android:pathData="M 48.5 48.5 L 55.5 48.5 L 55.5 55.5 L 48.5 55.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_96">
+                        <path
+                            android:name="path_164"
+                            android:pathData="M 48 40 L 56 40 L 56 48 L 48 48 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_165"
+                            android:pathData="M 48.5 40.5 L 55.5 40.5 L 55.5 47.5 L 48.5 47.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_107"
+                    android:pivotX="140"
+                    android:pivotY="160">
+                    <group android:name="group_98">
+                        <path
+                            android:name="path_166"
+                            android:pathData="M 175.707 168.424 L 167.707 168.288 L 167.843 160.288 L 175.843 160.424 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_167"
+                            android:pathData="M 175.215 167.916 L 168.215 167.797 L 168.334 160.797 L 175.334 160.916 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_99">
+                        <path
+                            android:name="path_168"
+                            android:pathData="M 167.707 168.288 L 159.707 168.152 L 159.843 160.152 L 167.843 160.288 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_169"
+                            android:pathData="M 167.215 167.78 L 160.215 167.661 L 160.334 160.661 L 167.334 160.78 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_100">
+                        <path
+                            android:name="path_170"
+                            android:pathData="M 183.435 184.56 L 175.435 184.424 L 175.571 176.424 L 183.571 176.56 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_171"
+                            android:pathData="M 182.944 184.052 L 175.944 183.933 L 176.063 176.933 L 183.063 177.052 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_101">
+                        <path
+                            android:name="path_172"
+                            android:pathData="M 175.571 176.424 L 167.571 176.288 L 167.707 168.288 L 175.707 168.424 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_173"
+                            android:pathData="M 175.079 175.916 L 168.079 175.797 L 168.198 168.797 L 175.198 168.916 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_102">
+                        <path
+                            android:name="path_174"
+                            android:pathData="M 167.435 184.288 L 159.435 184.152 L 159.571 176.152 L 167.571 176.288 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_175"
+                            android:pathData="M 167.189 184.034 L 159.689 183.906 L 159.817 176.406 L 167.317 176.534 Z"
+                            android:strokeWidth="0.500072"/>
+                    </group>
+                    <group android:name="group_103">
+                        <path
+                            android:name="path_176"
+                            android:pathData="M 183.707 168.56 L 175.707 168.424 L 175.843 160.424 L 183.843 160.56 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_177"
+                            android:pathData="M 183.215 168.052 L 176.215 167.933 L 176.334 160.933 L 183.334 161.052 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_104">
+                        <path
+                            android:name="path_178"
+                            android:pathData="M 167.571 176.288 L 159.571 176.152 L 159.707 168.152 L 167.707 168.288 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_179"
+                            android:pathData="M 167.079 175.78 L 160.079 175.661 L 160.198 168.661 L 167.198 168.78 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_105">
+                        <path
+                            android:name="path_180"
+                            android:pathData="M 175.843 160.424 L 167.843 160.288 L 167.979 152.288 L 175.979 152.424 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_181"
+                            android:pathData="M 175.351 159.916 L 168.351 159.797 L 168.47 152.797 L 175.47 152.916 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_106">
+                        <path
+                            android:name="path_182"
+                            android:pathData="M 159.571 176.152 L 151.571 176.016 L 151.707 168.016 L 159.707 168.152 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_183"
+                            android:pathData="M 159.079 175.643 L 152.079 175.524 L 152.198 168.524 L 159.198 168.643 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_117"
+                    android:pivotX="40"
+                    android:pivotY="40">
+                    <group android:name="group_108">
+                        <path
+                            android:name="path_184"
+                            android:pathData="M 8 16 L 16 16 L 16 24 L 8 24 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_185"
+                            android:pathData="M 8.5 16.5 L 15.5 16.5 L 15.5 23.5 L 8.5 23.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_109">
+                        <path
+                            android:name="path_186"
+                            android:pathData="M 16 16 L 24 16 L 24 24 L 16 24 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_187"
+                            android:pathData="M 16.5 16.5 L 23.5 16.5 L 23.5 23.5 L 16.5 23.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_110">
+                        <path
+                            android:name="path_188"
+                            android:pathData="M 0 0 L 8 0 L 8 8 L 0 8 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_189"
+                            android:pathData="M 0.5 0.5 L 7.5 0.5 L 7.5 7.5 L 0.5 7.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_111">
+                        <path
+                            android:name="path_190"
+                            android:pathData="M 8 8 L 16 8 L 16 16 L 8 16 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_191"
+                            android:pathData="M 8.5 8.5 L 15.5 8.5 L 15.5 15.5 L 8.5 15.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_112">
+                        <path
+                            android:name="path_192"
+                            android:pathData="M 16 0 L 24 0 L 24 8 L 16 8 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_193"
+                            android:pathData="M 16.25 0.25 L 23.75 0.25 L 23.75 7.75 L 16.25 7.75 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_113">
+                        <path
+                            android:name="path_194"
+                            android:pathData="M 0 16 L 8 16 L 8 24 L 0 24 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_195"
+                            android:pathData="M 0.5 16.5 L 7.5 16.5 L 7.5 23.5 L 0.5 23.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_114">
+                        <path
+                            android:name="path_196"
+                            android:pathData="M 16 8 L 24 8 L 24 16 L 16 16 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_197"
+                            android:pathData="M 16.5 8.5 L 23.5 8.5 L 23.5 15.5 L 16.5 15.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_115">
+                        <path
+                            android:name="path_198"
+                            android:pathData="M 8 24 L 16 24 L 16 32 L 8 32 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_199"
+                            android:pathData="M 8.5 24.5 L 15.5 24.5 L 15.5 31.5 L 8.5 31.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_116">
+                        <path
+                            android:name="path_200"
+                            android:pathData="M 24 8 L 32 8 L 32 16 L 24 16 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_201"
+                            android:pathData="M 24.5 8.5 L 31.5 8.5 L 31.5 15.5 L 24.5 15.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_127"
+                    android:pivotX="140"
+                    android:pivotY="40">
+                    <group android:name="group_118">
+                        <path
+                            android:name="path_202"
+                            android:pathData="M 168 8 L 168 16 L 160 16 L 160 8 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_203"
+                            android:pathData="M 167.5 8.5 L 167.5 15.5 L 160.5 15.5 L 160.5 8.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_119">
+                        <path
+                            android:name="path_204"
+                            android:pathData="M 168 16 L 168 24 L 160 24 L 160 16 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_205"
+                            android:pathData="M 167.5 16.5 L 167.5 23.5 L 160.5 23.5 L 160.5 16.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_120">
+                        <path
+                            android:name="path_206"
+                            android:pathData="M 184 0 L 184 8 L 176 8 L 176 0 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_207"
+                            android:pathData="M 183.5 0.5 L 183.5 7.5 L 176.5 7.5 L 176.5 0.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_121">
+                        <path
+                            android:name="path_208"
+                            android:pathData="M 176 8 L 176 16 L 168 16 L 168 8 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_209"
+                            android:pathData="M 175.5 8.5 L 175.5 15.5 L 168.5 15.5 L 168.5 8.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_122">
+                        <path
+                            android:name="path_210"
+                            android:pathData="M 184 16 L 184 24 L 176 24 L 176 16 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_211"
+                            android:pathData="M 183.75 16.25 L 183.75 23.75 L 176.25 23.75 L 176.25 16.25 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_123">
+                        <path
+                            android:name="path_212"
+                            android:pathData="M 168 0 L 168 8 L 160 8 L 160 0 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_213"
+                            android:pathData="M 167.5 0.5 L 167.5 7.5 L 160.5 7.5 L 160.5 0.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_124">
+                        <path
+                            android:name="path_214"
+                            android:pathData="M 176 16 L 176 24 L 168 24 L 168 16 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_215"
+                            android:pathData="M 175.5 16.5 L 175.5 23.5 L 168.5 23.5 L 168.5 16.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_125">
+                        <path
+                            android:name="path_216"
+                            android:pathData="M 160 8 L 160 16 L 152 16 L 152 8 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_217"
+                            android:pathData="M 159.5 8.5 L 159.5 15.5 L 152.5 15.5 L 152.5 8.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_126">
+                        <path
+                            android:name="path_218"
+                            android:pathData="M 176 24 L 176 32 L 168 32 L 168 24 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_219"
+                            android:pathData="M 175.5 24.5 L 175.5 31.5 L 168.5 31.5 L 168.5 24.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_138"
+                    android:pivotX="140"
+                    android:pivotY="40">
+                    <group android:name="group_128">
+                        <path
+                            android:name="path_220"
+                            android:pathData="M 152 24 L 152 32 L 144 32 L 144 24 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_221"
+                            android:pathData="M 151.5 24.5 L 151.5 31.5 L 144.5 31.5 L 144.5 24.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_129">
+                        <path
+                            android:name="path_222"
+                            android:pathData="M 160 32 L 160 40 L 152 40 L 152 32 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_223"
+                            android:pathData="M 159.5 32.5 L 159.5 39.5 L 152.5 39.5 L 152.5 32.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_130">
+                        <path
+                            android:name="path_224"
+                            android:pathData="M 152 32 L 152 40 L 144 40 L 144 32 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_225"
+                            android:pathData="M 151.5 32.5 L 151.5 39.5 L 144.5 39.5 L 144.5 32.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_131">
+                        <path
+                            android:name="path_226"
+                            android:pathData="M 152 40 L 152 48 L 144 48 L 144 40 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_227"
+                            android:pathData="M 151.5 40.5 L 151.5 47.5 L 144.5 47.5 L 144.5 40.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_132">
+                        <path
+                            android:name="path_228"
+                            android:pathData="M 152 48 L 152 56 L 144 56 L 144 48 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_229"
+                            android:pathData="M 151.5 48.5 L 151.5 55.5 L 144.5 55.5 L 144.5 48.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_133">
+                        <path
+                            android:name="path_230"
+                            android:pathData="M 144 32 L 144 40 L 136 40 L 136 32 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_231"
+                            android:pathData="M 143.5 32.5 L 143.5 39.5 L 136.5 39.5 L 136.5 32.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_134">
+                        <path
+                            android:name="path_232"
+                            android:pathData="M 136 32 L 136 40 L 128 40 L 128 32 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_233"
+                            android:pathData="M 135.5 32.5 L 135.5 39.5 L 128.5 39.5 L 128.5 32.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_135">
+                        <path
+                            android:name="path_234"
+                            android:pathData="M 136 40 L 136 48 L 128 48 L 128 40 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_235"
+                            android:pathData="M 135.5 40.5 L 135.5 47.5 L 128.5 47.5 L 128.5 40.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_136">
+                        <path
+                            android:name="path_236"
+                            android:pathData="M 136 48 L 136 56 L 128 56 L 128 48 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_237"
+                            android:pathData="M 135.5 48.5 L 135.5 55.5 L 128.5 55.5 L 128.5 48.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_137">
+                        <path
+                            android:name="path_238"
+                            android:pathData="M 144 48 L 144 56 L 136 56 L 136 48 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_239"
+                            android:pathData="M 143.5 48.5 L 143.5 55.5 L 136.5 55.5 L 136.5 48.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_149"
+                    android:pivotX="140"
+                    android:pivotY="140">
+                    <group android:name="group_139">
+                        <path
+                            android:name="path_240"
+                            android:pathData="M 160 152 L 152 152 L 152 144 L 160 144 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_241"
+                            android:pathData="M 159.5 151.5 L 152.5 151.5 L 152.5 144.5 L 159.5 144.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_140">
+                        <path
+                            android:name="path_242"
+                            android:pathData="M 152 160 L 144 160 L 144 152 L 152 152 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_243"
+                            android:pathData="M 151.5 159.5 L 144.5 159.5 L 144.5 152.5 L 151.5 152.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_141">
+                        <path
+                            android:name="path_244"
+                            android:pathData="M 152 152 L 144 152 L 144 144 L 152 144 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_245"
+                            android:pathData="M 151.5 151.5 L 144.5 151.5 L 144.5 144.5 L 151.5 144.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_142">
+                        <path
+                            android:name="path_246"
+                            android:pathData="M 144 152 L 136 152 L 136 144 L 144 144 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_247"
+                            android:pathData="M 143.5 151.5 L 136.5 151.5 L 136.5 144.5 L 143.5 144.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_143">
+                        <path
+                            android:name="path_248"
+                            android:pathData="M 136 152 L 128 152 L 128 144 L 136 144 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_249"
+                            android:pathData="M 135.5 151.5 L 128.5 151.5 L 128.5 144.5 L 135.5 144.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_144">
+                        <path
+                            android:name="path_250"
+                            android:pathData="M 152 144 L 144 144 L 144 136 L 152 136 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_251"
+                            android:pathData="M 151.5 143.5 L 144.5 143.5 L 144.5 136.5 L 151.5 136.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_145">
+                        <path
+                            android:name="path_252"
+                            android:pathData="M 152 136 L 144 136 L 144 128 L 152 128 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_253"
+                            android:pathData="M 151.5 135.5 L 144.5 135.5 L 144.5 128.5 L 151.5 128.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_146">
+                        <path
+                            android:name="path_254"
+                            android:pathData="M 144 136 L 136 136 L 136 128 L 144 128 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_255"
+                            android:pathData="M 143.5 135.5 L 136.5 135.5 L 136.5 128.5 L 143.5 128.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_147">
+                        <path
+                            android:name="path_256"
+                            android:pathData="M 136 136 L 128 136 L 128 128 L 136 128 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_257"
+                            android:pathData="M 135.5 135.5 L 128.5 135.5 L 128.5 128.5 L 135.5 128.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_148">
+                        <path
+                            android:name="path_258"
+                            android:pathData="M 136 144 L 128 144 L 128 136 L 136 136 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_259"
+                            android:pathData="M 135.5 143.5 L 128.5 143.5 L 128.5 136.5 L 135.5 136.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_160"
+                    android:pivotX="40"
+                    android:pivotY="140">
+                    <group android:name="group_150">
+                        <path
+                            android:name="path_260"
+                            android:pathData="M 31.987 160.111 L 32.123 152.111 L 40.123 152.247 L 39.987 160.247 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_261"
+                            android:pathData="M 32.495 159.619 L 32.614 152.619 L 39.614 152.738 L 39.495 159.738 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_151">
+                        <path
+                            android:name="path_262"
+                            android:pathData="M 24.123 151.975 L 24.259 143.975 L 32.259 144.111 L 32.123 152.111 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_263"
+                            android:pathData="M 24.631 151.483 L 24.75 144.483 L 31.75 144.602 L 31.631 151.602 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_152">
+                        <path
+                            android:name="path_264"
+                            android:pathData="M 32.123 152.111 L 32.259 144.111 L 40.259 144.247 L 40.123 152.247 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_265"
+                            android:pathData="M 32.632 151.619 L 32.751 144.619 L 39.751 144.738 L 39.632 151.738 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_153">
+                        <path
+                            android:name="path_266"
+                            android:pathData="M 32.259 144.111 L 32.395 136.111 L 40.395 136.247 L 40.259 144.247 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_267"
+                            android:pathData="M 32.767 143.619 L 32.886 136.619 L 39.886 136.738 L 39.767 143.738 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_154">
+                        <path
+                            android:name="path_268"
+                            android:pathData="M 32.395 136.111 L 32.531 128.111 L 40.531 128.247 L 40.395 136.247 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_269"
+                            android:pathData="M 32.904 135.619 L 33.023 128.619 L 40.023 128.738 L 39.904 135.738 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_155">
+                        <path
+                            android:name="path_270"
+                            android:pathData="M 40.123 152.247 L 40.259 144.247 L 48.259 144.383 L 48.123 152.383 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_271"
+                            android:pathData="M 40.632 151.756 L 40.751 144.756 L 47.751 144.875 L 47.632 151.875 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_156">
+                        <path
+                            android:name="path_272"
+                            android:pathData="M 48.123 152.383 L 48.259 144.383 L 56.259 144.519 L 56.123 152.519 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_273"
+                            android:pathData="M 48.632 151.892 L 48.751 144.892 L 55.751 145.011 L 55.632 152.011 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_157">
+                        <path
+                            android:name="path_274"
+                            android:pathData="M 48.259 144.383 L 48.395 136.383 L 56.395 136.519 L 56.259 144.519 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_275"
+                            android:pathData="M 48.767 143.892 L 48.886 136.892 L 55.886 137.011 L 55.767 144.011 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_158">
+                        <path
+                            android:name="path_276"
+                            android:pathData="M 48.395 136.383 L 48.531 128.383 L 56.531 128.519 L 56.395 136.519 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_277"
+                            android:pathData="M 48.904 135.892 L 49.023 128.892 L 56.023 129.011 L 55.904 136.011 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                    <group android:name="group_159">
+                        <path
+                            android:name="path_278"
+                            android:pathData="M 40.395 136.247 L 40.531 128.247 L 48.531 128.383 L 48.395 136.383 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_279"
+                            android:pathData="M 40.904 135.756 L 41.023 128.756 L 48.023 128.875 L 47.904 135.875 Z"
+                            android:strokeWidth="1.000144"/>
+                    </group>
+                </group>
+                <group android:name="group_166">
+                    <group android:name="group_161">
+                        <path
+                            android:name="path_280"
+                            android:pathData="M 64 48 L 72 48 L 72 56 L 64 56 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_281"
+                            android:pathData="M 64.5 48.5 L 71.5 48.5 L 71.5 55.5 L 64.5 55.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_162">
+                        <path
+                            android:name="path_282"
+                            android:pathData="M 64 56 L 72 56 L 72 64 L 64 64 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_283"
+                            android:pathData="M 64.5 56.5 L 71.5 56.5 L 71.5 63.5 L 64.5 63.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_163">
+                        <path
+                            android:name="path_284"
+                            android:pathData="M 64 64 L 72 64 L 72 72 L 64 72 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_285"
+                            android:pathData="M 64.5 64.5 L 71.5 64.5 L 71.5 71.5 L 64.5 71.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_164">
+                        <path
+                            android:name="path_286"
+                            android:pathData="M 56 64 L 64 64 L 64 72 L 56 72 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_287"
+                            android:pathData="M 56.5 64.5 L 63.5 64.5 L 63.5 71.5 L 56.5 71.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_165">
+                        <path
+                            android:name="path_288"
+                            android:pathData="M 48 64 L 56 64 L 56 72 L 48 72 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_289"
+                            android:pathData="M 48.5 64.5 L 55.5 64.5 L 55.5 71.5 L 48.5 71.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_171"
+                    android:pivotX="91"
+                    android:pivotY="69"
+                    android:rotation="3">
+                    <group android:name="group_167">
+                        <path
+                            android:name="path_290"
+                            android:pathData="M 80 64 L 88 64 L 88 72 L 80 72 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_291"
+                            android:pathData="M 80.5 64.5 L 87.5 64.5 L 87.5 71.5 L 80.5 71.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_168">
+                        <path
+                            android:name="path_292"
+                            android:pathData="M 88 56 L 96 56 L 96 64 L 88 64 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_293"
+                            android:pathData="M 88.5 56.5 L 95.5 56.5 L 95.5 63.5 L 88.5 63.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_169">
+                        <path
+                            android:name="path_294"
+                            android:pathData="M 96 64 L 104 64 L 104 72 L 96 72 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_295"
+                            android:pathData="M 96.5 64.5 L 103.5 64.5 L 103.5 71.5 L 96.5 71.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_170">
+                        <path
+                            android:name="path_296"
+                            android:pathData="M 88 72 L 96 72 L 96 80 L 88 80 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_297"
+                            android:pathData="M 88.5 72.5 L 95.5 72.5 L 95.5 79.5 L 88.5 79.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group android:name="group_178">
+                    <group android:name="group_172">
+                        <path
+                            android:name="path_298"
+                            android:pathData="M 72 32 L 80 32 L 80 40 L 72 40 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_299"
+                            android:pathData="M 72.5 32.5 L 79.5 32.5 L 79.5 39.5 L 72.5 39.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_173">
+                        <path
+                            android:name="path_300"
+                            android:pathData="M 80 24 L 88 24 L 88 32 L 80 32 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_301"
+                            android:pathData="M 80.5 24.5 L 87.5 24.5 L 87.5 31.5 L 80.5 31.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_174">
+                        <path
+                            android:name="path_302"
+                            android:pathData="M 88 24 L 96 24 L 96 32 L 88 32 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_303"
+                            android:pathData="M 88.5 24.5 L 95.5 24.5 L 95.5 31.5 L 88.5 31.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_175">
+                        <path
+                            android:name="path_304"
+                            android:pathData="M 96 24 L 104 24 L 104 32 L 96 32 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_305"
+                            android:pathData="M 96.5 24.5 L 103.5 24.5 L 103.5 31.5 L 96.5 31.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_176">
+                        <path
+                            android:name="path_306"
+                            android:pathData="M 104 32 L 112 32 L 112 40 L 104 40 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_307"
+                            android:pathData="M 104.5 32.5 L 111.5 32.5 L 111.5 39.5 L 104.5 39.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_177">
+                        <path
+                            android:name="path_308"
+                            android:pathData="M 88 16 L 96 16 L 96 24 L 88 24 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_309"
+                            android:pathData="M 88.5 16.5 L 95.5 16.5 L 95.5 23.5 L 88.5 23.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group android:name="group_184">
+                    <group android:name="group_179">
+                        <path
+                            android:name="path_310"
+                            android:pathData="M 136 64 L 136 72 L 128 72 L 128 64 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_311"
+                            android:pathData="M 135.5 64.5 L 135.5 71.5 L 128.5 71.5 L 128.5 64.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_180">
+                        <path
+                            android:name="path_312"
+                            android:pathData="M 128 64 L 128 72 L 120 72 L 120 64 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_313"
+                            android:pathData="M 127.5 64.5 L 127.5 71.5 L 120.5 71.5 L 120.5 64.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_181">
+                        <path
+                            android:name="path_314"
+                            android:pathData="M 120 64 L 120 72 L 112 72 L 112 64 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_315"
+                            android:pathData="M 119.5 64.5 L 119.5 71.5 L 112.5 71.5 L 112.5 64.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_182">
+                        <path
+                            android:name="path_316"
+                            android:pathData="M 120 56 L 120 64 L 112 64 L 112 56 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_317"
+                            android:pathData="M 119.5 56.5 L 119.5 63.5 L 112.5 63.5 L 112.5 56.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_183">
+                        <path
+                            android:name="path_318"
+                            android:pathData="M 120 48 L 120 56 L 112 56 L 112 48 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_319"
+                            android:pathData="M 119.5 48.5 L 119.5 55.5 L 112.5 55.5 L 112.5 48.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_189"
+                    android:pivotX="68"
+                    android:pivotY="93">
+                    <group android:name="group_185">
+                        <path
+                            android:name="path_320"
+                            android:pathData="M 56 88 L 64 88 L 64 96 L 56 96 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_321"
+                            android:pathData="M 56.5 88.5 L 63.5 88.5 L 63.5 95.5 L 56.5 95.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_186">
+                        <path
+                            android:name="path_322"
+                            android:pathData="M 64 80 L 72 80 L 72 88 L 64 88 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_323"
+                            android:pathData="M 64.5 80.5 L 71.5 80.5 L 71.5 87.5 L 64.5 87.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_187">
+                        <path
+                            android:name="path_324"
+                            android:pathData="M 72 88 L 80 88 L 80 96 L 72 96 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_325"
+                            android:pathData="M 72.5 88.5 L 79.5 88.5 L 79.5 95.5 L 72.5 95.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_188">
+                        <path
+                            android:name="path_326"
+                            android:pathData="M 64 96 L 72 96 L 72 104 L 64 104 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_327"
+                            android:pathData="M 64.5 96.5 L 71.5 96.5 L 71.5 103.5 L 64.5 103.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_194"
+                    android:pivotX="117"
+                    android:pivotY="93">
+                    <group android:name="group_190">
+                        <path
+                            android:name="path_328"
+                            android:pathData="M 104 88 L 112 88 L 112 96 L 104 96 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_329"
+                            android:pathData="M 104.5 88.5 L 111.5 88.5 L 111.5 95.5 L 104.5 95.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_191">
+                        <path
+                            android:name="path_330"
+                            android:pathData="M 112 80 L 120 80 L 120 88 L 112 88 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_331"
+                            android:pathData="M 112.5 80.5 L 119.5 80.5 L 119.5 87.5 L 112.5 87.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_192">
+                        <path
+                            android:name="path_332"
+                            android:pathData="M 120 88 L 128 88 L 128 96 L 120 96 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_333"
+                            android:pathData="M 120.5 88.5 L 127.5 88.5 L 127.5 95.5 L 120.5 95.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_193">
+                        <path
+                            android:name="path_334"
+                            android:pathData="M 112 96 L 120 96 L 120 104 L 112 104 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_335"
+                            android:pathData="M 112.5 96.5 L 119.5 96.5 L 119.5 103.5 L 112.5 103.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group
+                    android:name="group_199"
+                    android:pivotX="91"
+                    android:pivotY="116">
+                    <group android:name="group_195">
+                        <path
+                            android:name="path_336"
+                            android:pathData="M 80 112 L 88 112 L 88 120 L 80 120 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_337"
+                            android:pathData="M 80.5 112.5 L 87.5 112.5 L 87.5 119.5 L 80.5 119.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_196">
+                        <path
+                            android:name="path_338"
+                            android:pathData="M 88 104 L 96 104 L 96 112 L 88 112 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_339"
+                            android:pathData="M 88.5 104.5 L 95.5 104.5 L 95.5 111.5 L 88.5 111.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_197">
+                        <path
+                            android:name="path_340"
+                            android:pathData="M 96 112 L 104 112 L 104 120 L 96 120 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_341"
+                            android:pathData="M 96.5 112.5 L 103.5 112.5 L 103.5 119.5 L 96.5 119.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_198">
+                        <path
+                            android:name="path_342"
+                            android:pathData="M 88 120 L 96 120 L 96 128 L 88 128 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_343"
+                            android:pathData="M 88.5 120.5 L 95.5 120.5 L 95.5 127.5 L 88.5 127.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group android:name="group_205">
+                    <group android:name="group_200">
+                        <path
+                            android:name="path_344"
+                            android:pathData="M 120 136 L 112 136 L 112 128 L 120 128 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_345"
+                            android:pathData="M 119.5 135.5 L 112.5 135.5 L 112.5 128.5 L 119.5 128.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_201">
+                        <path
+                            android:name="path_346"
+                            android:pathData="M 120 128 L 112 128 L 112 120 L 120 120 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_347"
+                            android:pathData="M 119.5 127.5 L 112.5 127.5 L 112.5 120.5 L 119.5 120.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_202">
+                        <path
+                            android:name="path_348"
+                            android:pathData="M 120 120 L 112 120 L 112 112 L 120 112 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_349"
+                            android:pathData="M 119.5 119.5 L 112.5 119.5 L 112.5 112.5 L 119.5 112.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_203">
+                        <path
+                            android:name="path_350"
+                            android:pathData="M 128 120 L 120 120 L 120 112 L 128 112 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_351"
+                            android:pathData="M 127.5 119.5 L 120.5 119.5 L 120.5 112.5 L 127.5 112.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_204">
+                        <path
+                            android:name="path_352"
+                            android:pathData="M 136 120 L 128 120 L 128 112 L 136 112 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_353"
+                            android:pathData="M 135.5 119.5 L 128.5 119.5 L 128.5 112.5 L 135.5 112.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group android:name="group_211">
+                    <group android:name="group_206">
+                        <path
+                            android:name="path_354"
+                            android:pathData="M 48 120 L 48 112 L 56 112 L 56 120 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_355"
+                            android:pathData="M 48.5 119.5 L 48.5 112.5 L 55.5 112.5 L 55.5 119.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_207">
+                        <path
+                            android:name="path_356"
+                            android:pathData="M 56 120 L 56 112 L 64 112 L 64 120 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_357"
+                            android:pathData="M 56.5 119.5 L 56.5 112.5 L 63.5 112.5 L 63.5 119.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_208">
+                        <path
+                            android:name="path_358"
+                            android:pathData="M 64 120 L 64 112 L 72 112 L 72 120 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_359"
+                            android:pathData="M 64.5 119.5 L 64.5 112.5 L 71.5 112.5 L 71.5 119.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_209">
+                        <path
+                            android:name="path_360"
+                            android:pathData="M 64 128 L 64 120 L 72 120 L 72 128 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_361"
+                            android:pathData="M 64.5 127.5 L 64.5 120.5 L 71.5 120.5 L 71.5 127.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_210">
+                        <path
+                            android:name="path_362"
+                            android:pathData="M 64 136 L 64 128 L 72 128 L 72 136 Z"
+                            android:fillColor="@color/yellow"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_363"
+                            android:pathData="M 64.5 135.5 L 64.5 128.5 L 71.5 128.5 L 71.5 135.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group android:name="group_218">
+                    <group android:name="group_212">
+                        <path
+                            android:name="path_364"
+                            android:pathData="M 152 72 L 152 80 L 144 80 L 144 72 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_365"
+                            android:pathData="M 151.5 72.5 L 151.5 79.5 L 144.5 79.5 L 144.5 72.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_213">
+                        <path
+                            android:name="path_366"
+                            android:pathData="M 160 80 L 160 88 L 152 88 L 152 80 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_367"
+                            android:pathData="M 159.5 80.5 L 159.5 87.5 L 152.5 87.5 L 152.5 80.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_214">
+                        <path
+                            android:name="path_368"
+                            android:pathData="M 160 88 L 160 96 L 152 96 L 152 88 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_369"
+                            android:pathData="M 159.5 88.5 L 159.5 95.5 L 152.5 95.5 L 152.5 88.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_215">
+                        <path
+                            android:name="path_370"
+                            android:pathData="M 160 96 L 160 104 L 152 104 L 152 96 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_371"
+                            android:pathData="M 159.5 96.5 L 159.5 103.5 L 152.5 103.5 L 152.5 96.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_216">
+                        <path
+                            android:name="path_372"
+                            android:pathData="M 152 104 L 152 112 L 144 112 L 144 104 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_373"
+                            android:pathData="M 151.5 104.5 L 151.5 111.5 L 144.5 111.5 L 144.5 104.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_217">
+                        <path
+                            android:name="path_374"
+                            android:pathData="M 168 88 L 168 96 L 160 96 L 160 88 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_375"
+                            android:pathData="M 167.5 88.5 L 167.5 95.5 L 160.5 95.5 L 160.5 88.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group android:name="group_225">
+                    <group android:name="group_219">
+                        <path
+                            android:name="path_376"
+                            android:pathData="M 32 112 L 32 104 L 40 104 L 40 112 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_377"
+                            android:pathData="M 32.5 111.5 L 32.5 104.5 L 39.5 104.5 L 39.5 111.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_220">
+                        <path
+                            android:name="path_378"
+                            android:pathData="M 24 104 L 24 96 L 32 96 L 32 104 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_379"
+                            android:pathData="M 24.5 103.5 L 24.5 96.5 L 31.5 96.5 L 31.5 103.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_221">
+                        <path
+                            android:name="path_380"
+                            android:pathData="M 24 96 L 24 88 L 32 88 L 32 96 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_381"
+                            android:pathData="M 24.5 95.5 L 24.5 88.5 L 31.5 88.5 L 31.5 95.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_222">
+                        <path
+                            android:name="path_382"
+                            android:pathData="M 24 88 L 24 80 L 32 80 L 32 88 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_383"
+                            android:pathData="M 24.5 87.5 L 24.5 80.5 L 31.5 80.5 L 31.5 87.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_223">
+                        <path
+                            android:name="path_384"
+                            android:pathData="M 32 80 L 32 72 L 40 72 L 40 80 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_385"
+                            android:pathData="M 32.5 79.5 L 32.5 72.5 L 39.5 72.5 L 39.5 79.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_224">
+                        <path
+                            android:name="path_386"
+                            android:pathData="M 16 96 L 16 88 L 24 88 L 24 96 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_387"
+                            android:pathData="M 16.5 95.5 L 16.5 88.5 L 23.5 88.5 L 23.5 95.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+                <group android:name="group_232">
+                    <group android:name="group_226">
+                        <path
+                            android:name="path_388"
+                            android:pathData="M 112 152 L 104 152 L 104 144 L 112 144 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_389"
+                            android:pathData="M 111.5 151.5 L 104.5 151.5 L 104.5 144.5 L 111.5 144.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_227">
+                        <path
+                            android:name="path_390"
+                            android:pathData="M 104 160 L 96 160 L 96 152 L 104 152 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_391"
+                            android:pathData="M 103.5 159.5 L 96.5 159.5 L 96.5 152.5 L 103.5 152.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_228">
+                        <path
+                            android:name="path_392"
+                            android:pathData="M 96 160 L 88 160 L 88 152 L 96 152 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_393"
+                            android:pathData="M 95.5 159.5 L 88.5 159.5 L 88.5 152.5 L 95.5 152.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_229">
+                        <path
+                            android:name="path_394"
+                            android:pathData="M 88 160 L 80 160 L 80 152 L 88 152 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_395"
+                            android:pathData="M 87.5 159.5 L 80.5 159.5 L 80.5 152.5 L 87.5 152.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_230">
+                        <path
+                            android:name="path_396"
+                            android:pathData="M 80 152 L 72 152 L 72 144 L 80 144 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_397"
+                            android:pathData="M 79.5 151.5 L 72.5 151.5 L 72.5 144.5 L 79.5 144.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                    <group android:name="group_231">
+                        <path
+                            android:name="path_398"
+                            android:pathData="M 96 168 L 88 168 L 88 160 L 96 160 Z"
+                            android:fillColor="@color/blue"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_399"
+                            android:pathData="M 95.5 167.5 L 88.5 167.5 L 88.5 160.5 L 95.5 160.5 Z"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="group_171">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="rotation"
+                android:duration="3200"
+                android:valueFrom="0"
+                android:valueTo="720"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/linear_interpolator"/>
+        </aapt:attr>
+    </target>
+    <target android:name="group_189">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="rotation"
+                android:duration="3200"
+                android:valueFrom="720"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/linear_interpolator"/>
+        </aapt:attr>
+    </target>
+    <target android:name="group_194">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="rotation"
+                android:duration="3200"
+                android:valueFrom="720"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/linear_interpolator"/>
+        </aapt:attr>
+    </target>
+    <target android:name="group_199">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="rotation"
+                android:duration="3200"
+                android:valueFrom="720"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/linear_interpolator"/>
+        </aapt:attr>
+    </target>
+    <target android:name="group_86">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1427"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1427"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1427"
+                    android:duration="1773"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1427"
+                    android:duration="1773"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_160">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_149">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_107">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1616"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1616"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1616"
+                    android:duration="1584"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1616"
+                    android:duration="1584"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_97">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_117">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_138">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1616"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1616"
+                    android:valueFrom="1"
+                    android:valueTo="1.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1616"
+                    android:duration="1584"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1616"
+                    android:duration="1584"
+                    android:valueFrom="1.2"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_127">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1593"
+                    android:valueFrom="1"
+                    android:valueTo="0.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="1593"
+                    android:duration="1607"
+                    android:valueFrom="0.8"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

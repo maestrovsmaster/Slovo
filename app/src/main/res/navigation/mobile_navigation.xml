@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.maestrovs.slovo.screens.splash.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash"
+
+        >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_fragment_main_screen"
+            app:destination="@id/fragment_main_screen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_main_screen"
+        android:name="com.maestrovs.slovo.screens.main.MainScreenFragment"
+        tools:layout="@layout/fragment_main_screen"
+        >
+
+        <action
+            android:id="@+id/action_fragment_main_screen_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.maestrovs.slovo.screens.webview.WebViewFragment"
+        android:label="web_view_fragment"
+        tools:layout="@layout/fragment_web_view" >
+
+        <argument
+            android:name="slovo"
+            app:argType="string"
+            />
+
+    </fragment>
+</navigation>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="type" format="string" />
+    <attr name="title" format="string" />
+    <attr name="card_icon" format="reference" />
+    <attr name="text_color" format="reference" />
+    <attr name="foreground_tint" format="reference" />
+    <attr name="valuecard_darkbackground" format="boolean" />
+
+
+    <declare-styleable name="MenuButton">
+        <attr name="title"  />
+        <attr name="card_icon"  />
+        <attr name="badge" format="string"/>
+        <attr name="foreground_tint"  />
+        <attr name="text_color"  />
+    </declare-styleable>
+
+    <declare-styleable name="BaseTitleBar">
+        <attr name="title"  />
+        <attr name="showDivider" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FlipperLayout">
+        <attr name="default_index" format="integer"/>
+        <attr name="flipDirection">
+            <enum name="backToFront" value="0"/>
+            <enum name="frontToBack" value="1"/>
+        </attr>
+        <attr name="flipAxis">
+            <enum name="X" value="0"/>
+            <enum name="Y" value="1"/>
+        </attr>
+        <attr name="usePerspective" format="boolean"/>
+        <attr name="duration" format="integer"/>
+        <attr name="tapToFlip" format="boolean"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="anim_duration">400</integer>
+
+    <dimen name="keyH">88dp</dimen>
+    <dimen name="keyW">34dp</dimen>
+    <dimen name="keyMarg">1.5dp</dimen>
+
+    <dimen name="tileSize">88dp</dimen>
+
+</resources>

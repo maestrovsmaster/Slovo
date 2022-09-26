@@ -1,0 +1,31 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+
+    plugins {
+        id("androidx.navigation.safeargs.kotlin")
+        id 'org.jetbrains.kotlin.android' version '1.6.10'
+    }
+
+
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+
+    }
+
+}
+
+
+
+
+
+rootProject.name = "Slovo"
+include ':app'

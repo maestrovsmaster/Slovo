@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mRootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.maestrovs.slovo.components.flip.FlipperLayout
+        android:id="@+id/flipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="false"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="0dp"
+        app:default_index="0"
+        app:flipAxis="X">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+
+
+           <ImageView
+            android:id="@+id/buttonFront"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="false"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:text="dsdf"
+            app:elevation="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:strokeColor="@color/divider"
+            app:strokeWidth="0dp"
+            android:stateListAnimator="@null"
+            app:cornerRadius="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            />
+
+
+            <TextView
+                android:id="@+id/textFront"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clickable="false"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:text="Я"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/comfortaa_semi_bold"
+                android:textSize="22sp"
+                app:elevation="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:stateListAnimator="@null"
+                app:cornerRadius="0dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="4dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:id="@+id/buttonRear"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clickable="false"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:text="dsdf"
+                android:textColor="@android:color/white"
+                app:elevation="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="0dp"
+                android:stateListAnimator="@null"
+                app:cornerRadius="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="H,1:1"
+                />
+
+
+            <TextView
+                android:id="@+id/textRear"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clickable="false"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:text="Я"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/comfortaa_semi_bold"
+                android:textSize="22sp"
+                app:elevation="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:stateListAnimator="@null"
+                app:cornerRadius="0dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="4dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.maestrovs.slovo.components.flip.FlipperLayout>
+</FrameLayout>
