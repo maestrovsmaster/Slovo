@@ -22,6 +22,7 @@ import com.maestrovs.slovo.databinding.FragmentMainScreenBinding
 import com.maestrovs.slovo.model.Key
 import com.maestrovs.slovo.model.KeyUI
 import com.maestrovs.slovo.model.KeyType
+import com.maestrovs.slovo.model.isMoreWeight
 import com.maestrovs.slovo.screens.MainActivity
 import com.maestrovs.slovo.screens.MainViewModel
 import com.maestrovs.slovo.screens.base.BaseFragment
@@ -195,9 +196,36 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
 
 
     fun addKeysToExists(adds: List<Key>) {
-        adds.map {
-            if (!keyboardKeys.contains(it)) {
-                keyboardKeys.add(it)
+
+
+
+        adds.map { letter ->
+            Log.d("KeysKL","letter = $letter")
+
+            var curentLetter = letter
+
+            val sameLs = adds.filter { ds -> ds.value == letter.value }
+            Log.d("KeysKL","sameLs = $sameLs")
+            sameLs.map { same ->
+                if(same.state.isMoreWeight(curentLetter.state)){
+                    curentLetter = same
+                }
+            }
+
+            if (!keyboardKeys.contains(curentLetter)) {
+                Log.d("KeysKL","add + $curentLetter")
+                keyboardKeys.add(curentLetter)
+            }else{
+                var curentLetter2 = curentLetter
+                val sameLs = keyboardKeys.filter { ds -> ds.value == curentLetter.value }
+                if(sameLs.isNotEmpty()){
+                    if(sameLs[0].state.isMoreWeight(curentLetter2.state)){
+                        curentLetter2 = sameLs[0]
+                    }else{}
+                } else {
+                    //Nothing
+                }
+                keyboardKeys.add(curentLetter2)
             }
         }
     }

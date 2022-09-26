@@ -51,8 +51,6 @@ e
 5app/src/main/java/com/maestrovs/slovo/data/UserDao.kt,f/3/f34b2514c5986f1d0fede71f751b5d46d09f45c3
 m
 =app/src/main/java/com/maestrovs/slovo/common/SharedManager.kt,a/4/a4a41a658cd8c1c7f7efcecdf64f8e4a0d6b3af8
-b
-2app/src/main/java/com/maestrovs/slovo/model/Row.kt,e/7/e714605635946ef671c9a3adf54068a1f3ce56c9
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 f
@@ -77,9 +75,3 @@ x
 Happ/src/main/java/com/maestrovs/slovo/screens/webview/WebViewFragment.kt,f/d/fda3622ab8d207ddf1c0950e53a3a67579941d5f
 |
 Lapp/src/main/java/com/maestrovs/slovo/screens/splash/SplashScreenFragment.kt,e/e/ee638785e32b24cc2475ea62178f6acb42e359f9
-b
-2app/src/main/java/com/maestrovs/slovo/model/Key.kt,9/2/92b710be415f8480fcad3e6bb0dd4d6e273de62d
-d
-4app/src/main/java/com/maestrovs/slovo/model/KeyUI.kt,3/b/3bb9f8273d91754cef75140ee17537b7833af5f5
-f
-6app/src/main/java/com/maestrovs/slovo/model/KeyType.kt,2/4/24f4b18262dead125dc025f9b17859f591d270c8
