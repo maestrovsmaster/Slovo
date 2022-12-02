@@ -1,27 +1,29 @@
 package com.maestrovs.slovo.screens.main
 
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.afollestad.materialdialogs.MaterialDialog
 import com.maestrovs.slovo.R
 import com.maestrovs.slovo.components.KeyboardProtocol
 import com.maestrovs.slovo.components.OpenStatus
 import com.maestrovs.slovo.data.Game
 import com.maestrovs.slovo.databinding.FragmentMainScreenBinding
 import com.maestrovs.slovo.model.Key
-import com.maestrovs.slovo.model.KeyUI
 import com.maestrovs.slovo.model.KeyType
+import com.maestrovs.slovo.model.KeyUI
 import com.maestrovs.slovo.model.isMoreWeight
 import com.maestrovs.slovo.screens.MainActivity
 import com.maestrovs.slovo.screens.MainViewModel
@@ -70,6 +72,14 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
         //  binding.btMenuShipments onClick mainScreenViewModel.onShipments()
         binding.gameSmile.visibility = View.GONE
 
+        val myString = "#слово"
+        val spanFlag = Spannable.SPAN_INCLUSIVE_INCLUSIVE
+        val spannableString = SpannableString(myString)
+        val foregroundSpan = ForegroundColorSpan(Color.RED)
+        spannableString.setSpan(foregroundSpan, 0, 1, spanFlag)
+
+        binding.title.text = spannableString
+
         binding.statistic.setOnClickListener {
            // val games = db!!.userDao().getAll()
             Log.d("Game","games..")
@@ -83,7 +93,6 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
             slovo.let {
                 findNavController().navigate(MainScreenFragmentDirections.actionFragmentMainScreenToWebViewFragment(it))
             }
-
         }
 
         binding.nextBt.setOnClickListener {
@@ -144,7 +153,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
 
         when(status){
             OpenStatus.Win ->{
-                mainScreenViewModel.updateSlovoStepInDB(Game(slovo,step+1))
+                mainScreenViewModel.updateSlovoStepInDB(Game(slovo,step+1,0,false))
                 showWin()
             }
             OpenStatus.Game -> {
@@ -163,7 +172,12 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
                     binding.keyboard.updateKeys(keyboardKeys)
                 } else {
                     //Fail
-                    mainScreenViewModel.updateSlovoStepInDB(Game(slovo,-1))
+                    if(step>=0){
+                        step = -1 //Можна повторну спробу вгадати слово
+                    }else{
+                        step = -2 //Немає більше спроб вгадати слово
+                    }
+                    mainScreenViewModel.updateSlovoStepInDB(Game(slovo,step,0,false))
                     showFail()
                 }
             }
@@ -293,10 +307,11 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
 
         mainScreenViewModel.resetSavedGame()
         Handler(Looper.getMainLooper()).postDelayed({
-            binding.nextBt.visibility = View.VISIBLE
+            /*binding.nextBt.visibility = View.VISIBLE
             binding.webViewBt.visibility = View.VISIBLE
             binding.gameSmile.visibility = View.VISIBLE
-            binding.gameSmile.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.smile_glad_green));
+            binding.gameSmile.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.smile_glad_green));*/
+            findNavController().navigate(MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(slovo, true))
 
         }, ngDelay)
 
@@ -306,10 +321,11 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
 
         mainScreenViewModel.resetSavedGame()
         Handler(Looper.getMainLooper()).postDelayed({
-            binding.nextBt.visibility = View.VISIBLE
+          /*  binding.nextBt.visibility = View.VISIBLE
             binding.webViewBt.visibility = View.VISIBLE
             binding.gameSmile.visibility = View.VISIBLE
-            binding.gameSmile.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.smile_sad));
+            binding.gameSmile.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.smile_sad));*/
+            findNavController().navigate(MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(slovo, false))
         }, ngDelay)
     }
 

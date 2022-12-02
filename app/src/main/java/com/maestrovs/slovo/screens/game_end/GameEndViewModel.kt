@@ -1,9 +1,9 @@
-package com.maestrovs.slovo.screens.splash
+package com.maestrovs.slovo.screens.game_end
 
 import android.app.Application
 import com.maestrovs.slovo.screens.base.BaseViewModel
 
-class SplashScreenViewModel(application: Application) : BaseViewModel(application) {
+class GameEndViewModel(application: Application) : BaseViewModel(application) {
 
 
 
@@ -14,15 +14,14 @@ class SplashScreenViewModel(application: Application) : BaseViewModel(applicatio
 
 
 
-    fun onMainScreen() {
+   /* fun onMainScreen() {
         navController.navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToFragmentMainScreen())
 
 
-       // navController.navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToGameEndFragment("молоко",false))
        /// navController.navigate(R.id.schedulersFragment)
 
      ///   navController.navigate(R.id.feedbackFragment)
-    }
+    }*/
 
 
    /* fun onPhoneVerification() {

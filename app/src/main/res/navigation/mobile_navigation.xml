@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_webViewFragment"
             app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_gameEndFragment"
+            app:destination="@id/gameEndFragment" />
 
     </fragment>
 
@@ -37,6 +40,9 @@
         <action
             android:id="@+id/action_fragment_main_screen_to_webViewFragment"
             app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_fragment_main_screen_to_gameEndFragment"
+            app:destination="@id/gameEndFragment" />
     </fragment>
     <fragment
         android:id="@+id/webViewFragment"
@@ -49,5 +55,24 @@
             app:argType="string"
             />
 
+    </fragment>
+    <fragment
+        android:id="@+id/gameEndFragment"
+        android:name="com.maestrovs.slovo.screens.game_end.GameEndFragment"
+        android:label="GameEndFragment"
+        tools:layout="@layout/fragment_game_end"
+        >
+        <argument
+            android:name="slovo"
+            app:argType="string"
+            />
+        <argument
+            android:name="isWin"
+            app:argType="boolean"
+            />
+
+        <action
+            android:id="@+id/action_gameEndFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
     </fragment>
 </navigation>

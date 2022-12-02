@@ -56,7 +56,7 @@ class WebViewFragment : BaseFragment() {
 
       binding.backButton.setOnClickListener{
 
-          findNavController().popBackStack(R.id.fragment_main_screen, false)
+          findNavController().popBackStack()//popBackStack(R.id.fragment_main_screen, false)
       }
 
         val slovo = safeArgs.slovo

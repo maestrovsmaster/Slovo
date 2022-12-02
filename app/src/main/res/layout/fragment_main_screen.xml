@@ -24,13 +24,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
-        android:text="Slovo"
+        android:text="#слово"
+        android:textStyle="italic"
         android:textColor="@color/black"
-        android:textSize="33sp"
+        android:textSize="30sp"
         />
 
     <ImageView
-        android:id="@+id/statistic"
+        android:id="@+id/about"
         android:layout_width="44dp"
         android:layout_height="44dp"
         android:layout_marginEnd="16dp"
@@ -38,8 +39,23 @@
         app:layout_constraintBottom_toBottomOf="@id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/title"
-        app:srcCompat="@drawable/ic_leaderboard_48px"
+        app:srcCompat="@drawable/ic_about_fill"
         android:padding="4dp"
+        android:alpha="0.2"
+        />
+
+    <ImageView
+        android:id="@+id/statistic"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:srcCompat="@drawable/ic_statistic_fill"
+        android:padding="4dp"
+        android:alpha="0.2"
         />
 
     <View
@@ -58,51 +74,51 @@
         android:id="@+id/gameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="65dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="65dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
 
 
         <com.maestrovs.slovo.components.UITilesRow
             android:id="@+id/word1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.maestrovs.slovo.components.UITilesRow
             android:id="@+id/word2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.maestrovs.slovo.components.UITilesRow
             android:id="@+id/word3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.maestrovs.slovo.components.UITilesRow
             android:id="@+id/word4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.maestrovs.slovo.components.UITilesRow
             android:id="@+id/word5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.maestrovs.slovo.components.UITilesRow
             android:id="@+id/word6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.maestrovs.slovo.components.UITilesRow
             android:id="@+id/word7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            />
+            android:visibility="gone" />
 
 
     </LinearLayout>
@@ -131,6 +147,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Значення слова"
+        android:visibility="gone"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -144,6 +161,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:text="Наступна гра"
+        android:visibility="gone"
         />
 
 

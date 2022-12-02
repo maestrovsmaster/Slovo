@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ornam_border_top"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="вірно!"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvSlovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:text="СЛОВО"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/hiddinImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/img_hidding_pass"
+        app:layout_constraintTop_toTopOf="@id/tvSlovo"
+        app:layout_constraintBottom_toBottomOf="@id/tvSlovo"
+        app:layout_constraintStart_toStartOf="@id/tvSlovo"
+        app:layout_constraintEnd_toEndOf="@id/tvSlovo"
+        android:visibility="gone"
+         />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btShow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="показати слово"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:background="@android:color/transparent"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/tvSlovo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btAgain"
+        app:layout_constraintBottom_toTopOf="@id/ivResult"
+        android:layout_marginStart="20dp"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btAgain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="спробувати відгадати"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:background="@android:color/transparent"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btShow"
+        app:layout_constraintBottom_toBottomOf="@id/btShow"
+        app:layout_constraintStart_toEndOf="@id/btShow"
+        android:layout_marginEnd="20dp"
+        />
+
+
+
+
+    <ImageView
+        android:id="@+id/ivResult"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_orn_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="НАСТУПНА ГРА"
+        android:textColor="@color/blue"
+        android:textSize="23sp"
+        android:textFontWeight="800"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/ivResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btMeaning"
+        android:foreground="?android:attr/selectableItemBackground"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btMeaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="значення слова"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/btNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_ornam_border_bottom"
+        android:scaleType="fitXY"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

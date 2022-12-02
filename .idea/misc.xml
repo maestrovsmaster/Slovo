@@ -18,6 +18,7 @@
         <entry key="app/src/main/res/layout/component_keyboard.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/component_tile.xml" value="0.9052044609665427" />
         <entry key="app/src/main/res/layout/component_tiles_row.xml" value="0.4041666666666667" />
+        <entry key="app/src/main/res/layout/fragment_game_end.xml" value="0.44529825846354165" />
         <entry key="app/src/main/res/layout/fragment_main_screen.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/fragment_web_view.xml" value="0.4041666666666667" />

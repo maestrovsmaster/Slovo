@@ -37,6 +37,9 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     var slovo: String? = null
 
+    var attempt = 0
+    var attemptSlovo: String? = null;
+
 
     //private var savedSlovo: String? = null
     private var savedWords: HashSet<String> = hashSetOf()
@@ -96,30 +99,37 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             }
         }
 
+
+
         if(restoredSlovo != null && !savedSteps.isNullOrEmpty()){
             slovo = restoredSlovo!!
-            callback(Game(restoredSlovo!!, 0), list)
-        }else {
+            attemptSlovo = null; attempt = 0;
+            callback(Game(restoredSlovo!!, 0,0,false), list)
+        }else if(attemptSlovo != null) {
+            slovo = attemptSlovo!!
+            callback(Game(attemptSlovo!!, 0,0,false), list)
+        }else{
+            attemptSlovo = null; attempt = 0;
+                BehaviorSubject.create { emitter: ObservableEmitter<List<Game>> ->
+                    val games = db.userDao().getRandomSlovo()
+                    emitter.onNext(games)
+                }.hide()
+                    .observeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.newThread())
+                    .subscribe({
+                        if (it.isEmpty()) {
+                            callback(Game("ФІНІШ", 0,0,false),null)
+                        } else {
+                            slovo = it[0].slovo
+                            callback(it[0], null)
+                        }
 
-            BehaviorSubject.create { emitter: ObservableEmitter<List<Game>> ->
-                val games = db.userDao().getRandomSlovo()
-                emitter.onNext(games)
-            }.hide()
-                .observeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.newThread())
-                .subscribe({
-                    if (it.isEmpty()) {
-                        callback(Game("ФІНІШ", 0),null)
-                    } else {
-                        slovo = it[0].slovo
-                        callback(it[0], null)
-                    }
+                    }, {
+                        errorMessage.postValue(it.localizedMessage)
+                    }).addTo(disposable)
+            }
 
-                }, {
-                    errorMessage.postValue(it.localizedMessage)
-                }).addTo(disposable)
-        }
     }
 
     fun updateSlovoStepInDB(game: Game){
@@ -217,7 +227,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
         var count = 0
         dictionary.map {
             Completable.create { emitter ->
-                db.userDao().insertAll(Game(it.uppercase(),0))
+                db.userDao().insertAll(Game(it.uppercase(),0,0,false))
                 emitter.onComplete()}
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.newThread())
