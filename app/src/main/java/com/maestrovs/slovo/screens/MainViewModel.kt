@@ -16,6 +16,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.ObservableEmitter
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 import java.io.BufferedReader
@@ -223,30 +224,26 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             }).addTo(disposable)
     }
 
-    fun writeDictionaryToDB(dictionary: List<String>,progress:  (Int)->(Unit),callback: ()->(Unit)){
-        var count = 0
-        dictionary.map {
-            Completable.create { emitter ->
-                db.userDao().insertAll(Game(it.uppercase(),0,0,false))
-                emitter.onComplete()}
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.newThread())
-                .subscribe({
-                    Log.d("ServiceResponse","msgsucc")
-                    count +=1
-                    progress(count)
-                    if(count == dictionary.size) callback()
-                }, {
-                    count +=1
-                    progress(count)
-                    Log.d("ServiceResponse","err = $it")
-                    errorMessage.postValue(it.localizedMessage)
-                    if(count == dictionary.size) callback()
+    fun writeDictionaryToDB(
+        dictionary: List<String>,
+        progress: (Int) -> Unit,
+        onComplete: () -> Unit
+    ) {
+        val disposable = CompositeDisposable()
+        val games = dictionary.map { Game(it.uppercase(), 0, 0, false) }.toTypedArray()
 
-                }).addTo(disposable)
+        Observable.fromCallable {
+            db.userDao().insertAll(*games)
         }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                progress(dictionary.size)
+                onComplete()
+            }, {
+                // Обробка помилок
+            }).addTo(disposable)
     }
-
 
 
 

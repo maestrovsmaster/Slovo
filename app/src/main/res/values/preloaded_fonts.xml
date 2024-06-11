@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/alex_brush</item>
+        <item>@font/courgette</item>
+        <item>@font/oleo_script</item>
         <item>@font/press_start_2p</item>
     </array>
 </resources>

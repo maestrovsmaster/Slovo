@@ -41,7 +41,9 @@
         app:layout_constraintTop_toTopOf="@id/title"
         app:srcCompat="@drawable/ic_about_fill"
         android:padding="4dp"
-        android:alpha="0.2"
+        android:alpha="1.0"
+        android:clickable="true"
+        android:focusable="true"
         />
 
     <ImageView
@@ -56,6 +58,7 @@
         app:srcCompat="@drawable/ic_statistic_fill"
         android:padding="4dp"
         android:alpha="0.2"
+        android:visibility="invisible"
         />
 
     <View
