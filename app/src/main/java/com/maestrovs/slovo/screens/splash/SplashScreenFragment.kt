@@ -55,14 +55,13 @@ class SplashScreenFragment : BaseFragment() {
 
         mainScreenViewModel.getGamesCount {
             Log.d("Game", "Games count = $it")
-            if (it == null || it == 0)
-            {
+            if (it == null || it == 0) {
                 binding.dicText.visibility = View.VISIBLE
                 mainScreenViewModel.readDictionary { dic ->
                     var totalCnt = dic.size
                     binding.dicProgress.max = totalCnt
                     mainScreenViewModel.writeDictionaryToDB(dic, { progress ->
-                       // Log.d("Game", "Progress = $progress")
+                        // Log.d("Game", "Progress = $progress")
                         binding.dicProgress.progress = progress
                     },
                         {
@@ -74,7 +73,7 @@ class SplashScreenFragment : BaseFragment() {
             }
         }
 
-       /// findNavController().navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToWebViewFragment("слово"))
+        /// findNavController().navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToWebViewFragment("слово"))
 
         return root
     }

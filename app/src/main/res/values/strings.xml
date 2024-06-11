@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Slovo</string>
+
+    <string name="slovo_ridne">Мово рідна, слово рідне,\nХто вас забуває,\nТой у грудях не серденько,\nА лиш камінь має.</string>
+
+    <string name="sydir_vorobkevych">Сидір Воробкевич</string>
+
 </resources>
