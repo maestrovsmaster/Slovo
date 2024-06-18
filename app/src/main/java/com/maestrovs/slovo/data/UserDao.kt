@@ -6,24 +6,24 @@ import androidx.room.Query
 
 @Dao
 interface UserDao {
-    @Query("SELECT * FROM game")
-    fun getAll(): List<Game>
+    @Query("SELECT * FROM slovo")
+    fun getAll(): List<Slovo>
 
-    @Query("SELECT COUNT(*) FROM game")
+    @Query("SELECT COUNT(*) FROM slovo")
     fun getGamesCount(): Int
 
-    @Query("SELECT * FROM game WHERE game.step = 0 ORDER BY RANDOM() LIMIT 1")
-    fun getRandomSlovo():List<Game>
+    @Query("SELECT * FROM slovo WHERE slovo.step = 0 ORDER BY RANDOM() LIMIT 1")
+    fun getRandomSlovo():List<Slovo>
 
 
-    @Query("UPDATE game SET step=:step WHERE slovo = :slovo")
+    @Query("UPDATE slovo SET step=:step WHERE slovo = :slovo")
     fun updateSlovoStep(slovo: String, step: Int)
 
-    @Query("SELECT * FROM game WHERE step != 0")
-    fun getPlayedGames(): List<Game>
+    @Query("SELECT * FROM slovo WHERE step != 0")
+    fun getPlayedGames(): List<Slovo>
 
-    @Query("SELECT * FROM game WHERE slovo = :slovo")
-    fun checkSlovo(slovo: String): List<Game>
+    @Query("SELECT * FROM slovo WHERE slovo = :slovo")
+    fun checkSlovo(slovo: String): List<Slovo>
 
   //  @Query("SELECT * FROM game WHERE uid IN (:userIds)")
  //   fun loadAllByIds(userIds: IntArray): List<Game>
@@ -33,7 +33,7 @@ interface UserDao {
    // fun findByName(first: String, last: String): Game
 
     @Insert
-    fun insertAll(vararg game: Game)
+    fun insertAll(vararg slovo: Slovo)
 
 
 

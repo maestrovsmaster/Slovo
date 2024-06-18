@@ -1,6 +1,5 @@
 package com.maestrovs.slovo.screens.main
 
-import android.app.Dialog
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
@@ -11,7 +10,6 @@ import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.*
 import android.view.animation.AnimationUtils
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,7 +17,7 @@ import androidx.navigation.fragment.findNavController
 import com.maestrovs.slovo.R
 import com.maestrovs.slovo.components.KeyboardProtocol
 import com.maestrovs.slovo.components.OpenStatus
-import com.maestrovs.slovo.data.Game
+import com.maestrovs.slovo.data.Slovo
 import com.maestrovs.slovo.databinding.FragmentMainScreenBinding
 import com.maestrovs.slovo.model.Key
 import com.maestrovs.slovo.model.KeyType
@@ -29,7 +27,6 @@ import com.maestrovs.slovo.screens.MainActivity
 import com.maestrovs.slovo.screens.MainViewModel
 import com.maestrovs.slovo.screens.about.AboutAppBottomSheetDialogFragment
 import com.maestrovs.slovo.screens.base.BaseFragment
-import com.maestrovs.slovo.screens.extensions.applyFont
 
 
 class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
@@ -182,7 +179,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
 
         when (status) {
             OpenStatus.Win -> {
-                mainScreenViewModel.updateSlovoStepInDB(Game(slovo, step + 1, 0, false))
+                mainScreenViewModel.updateSlovoStepInDB(Slovo(slovo, null,step + 1, 0, false))
                 showWin()
             }
 
@@ -210,7 +207,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
                     } else {
                         step = -2 //Немає більше спроб вгадати слово
                     }
-                    mainScreenViewModel.updateSlovoStepInDB(Game(slovo, step, 0, false))
+                    mainScreenViewModel.updateSlovoStepInDB(Slovo(slovo, null,step, 0, false))
                     showFail()
                 }
             }

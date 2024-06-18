@@ -9,7 +9,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.room.Room
 import com.maestrovs.slovo.common.SharedManager
 import com.maestrovs.slovo.data.AppDatabase
-import com.maestrovs.slovo.data.Game
+import com.maestrovs.slovo.data.Slovo
 import com.maestrovs.slovo.screens.base.BaseViewModel
 import com.maestrovs.slovo.screens.extensions.addTo
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -88,7 +88,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
 
 
-    fun selectRandomSlovo(callback: (Game, savedSteps:List<String>?)->(Unit)){
+    fun selectRandomSlovo(callback: (Slovo, savedSteps:List<String>?)->(Unit)){
         var list : MutableList<String>? = null
         val savedSteps = readLastWords()
         if(savedSteps.isNullOrEmpty()){
@@ -105,13 +105,13 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
         if(restoredSlovo != null && !savedSteps.isNullOrEmpty()){
             slovo = restoredSlovo!!
             attemptSlovo = null; attempt = 0;
-            callback(Game(restoredSlovo!!, 0,0,false), list)
+            callback(Slovo(restoredSlovo!!, null,0,0,false), list)
         }else if(attemptSlovo != null) {
             slovo = attemptSlovo!!
-            callback(Game(attemptSlovo!!, 0,0,false), list)
+            callback(Slovo(attemptSlovo!!, null,0,0,false), list)
         }else{
             attemptSlovo = null; attempt = 0;
-                BehaviorSubject.create { emitter: ObservableEmitter<List<Game>> ->
+                BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
                     val games = db.userDao().getRandomSlovo()
                     emitter.onNext(games)
                 }.hide()
@@ -120,7 +120,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
                     .subscribeOn(Schedulers.newThread())
                     .subscribe({
                         if (it.isEmpty()) {
-                            callback(Game("ФІНІШ", 0,0,false),null)
+                            callback(Slovo("ФІНІШ", null,0,0,false),null)
                         } else {
                             slovo = it[0].slovo
                             callback(it[0], null)
@@ -133,9 +133,9 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     }
 
-    fun updateSlovoStepInDB(game: Game){
+    fun updateSlovoStepInDB(slovo: Slovo){
         Completable.create { emitter ->
-            db.userDao().updateSlovoStep(game.slovo?:"",game.step?:0)
+            db.userDao().updateSlovoStep(slovo.slovo?:"",slovo.step?:0)
             emitter.onComplete()}
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.newThread())
@@ -149,9 +149,9 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             }).addTo(disposable)
     }
 
-    fun writeGameToDB(game: Game){
+    fun writeGameToDB(slovo: Slovo){
         Completable.create { emitter ->
-            db.userDao().insertAll(game)
+            db.userDao().insertAll(slovo)
             emitter.onComplete()}
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.newThread())
@@ -165,8 +165,8 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             }).addTo(disposable)
     }
 
-    fun readStatistic(callback: (List<Game>)->(Unit)){
-        BehaviorSubject.create { emitter: ObservableEmitter<List<Game>> ->
+    fun readStatistic(callback: (List<Slovo>)->(Unit)){
+        BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
             val games = db.userDao().getPlayedGames()
             emitter.onNext(games)
         }.hide()
@@ -181,7 +181,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
     }
 
     fun checkSlovo(word: String, callback: (Boolean)->(Unit)){
-        BehaviorSubject.create { emitter: ObservableEmitter<List<Game>> ->
+        BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
             val games = db.userDao().checkSlovo(word)
             emitter.onNext(games)
         }.hide()
@@ -196,8 +196,8 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
     }
 
 
-    fun readGames(callback: (List<Game>)->(Unit)){
-        BehaviorSubject.create { emitter: ObservableEmitter<List<Game>> ->
+    fun readGames(callback: (List<Slovo>)->(Unit)){
+        BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
             val games = db.userDao().getAll()
             emitter.onNext(games)
         }.hide()
@@ -230,10 +230,17 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
         onComplete: () -> Unit
     ) {
         val disposable = CompositeDisposable()
-        val games = dictionary.map { Game(it.uppercase(), 0, 0, false) }.toTypedArray()
+
+        val slovos = dictionary.map {
+
+            val result = parseSlovo(it)
+            val slovo = result.first.uppercase()
+            val level = result.second
+
+            Slovo(slovo,level, 0, 0, false) }.toTypedArray()
 
         Observable.fromCallable {
-            db.userDao().insertAll(*games)
+            db.userDao().insertAll(*slovos)
         }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -243,6 +250,19 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             }, {
                 // Обробка помилок
             }).addTo(disposable)
+    }
+
+    fun parseSlovo(input: String): Pair<String, Int?> {
+        val regex = Regex("(.+)-(.+)")
+        val matchResult = regex.matchEntire(input)
+
+        return if (matchResult != null) {
+            val (word, number) = matchResult.destructured
+            val numberInt = number.toIntOrNull()
+            Pair(word, numberInt)
+        } else {
+            Pair(input, null)
+        }
     }
 
 
