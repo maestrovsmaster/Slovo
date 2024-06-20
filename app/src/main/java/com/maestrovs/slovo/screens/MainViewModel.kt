@@ -73,7 +73,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     fun getGamesCount(callback: (Int?)->(Unit)){
         BehaviorSubject.create { emitter: ObservableEmitter<Int> ->
-            val games = db.userDao().getGamesCount()
+            val games = db.slovoDao().getGamesCount()
             emitter.onNext(games)
         }
             .observeOn(AndroidSchedulers.mainThread())
@@ -112,7 +112,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
         }else{
             attemptSlovo = null; attempt = 0;
                 BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
-                    val games = db.userDao().getRandomSlovo()
+                    val games = db.slovoDao().getRandomSlovo()
                     emitter.onNext(games)
                 }.hide()
                     .observeOn(Schedulers.io())
@@ -135,7 +135,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     fun updateSlovoStepInDB(slovo: Slovo){
         Completable.create { emitter ->
-            db.userDao().updateSlovoStep(slovo.slovo?:"",slovo.step?:0)
+            db.slovoDao().updateSlovoStep(slovo.slovo?:"",slovo.step?:0)
             emitter.onComplete()}
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.newThread())
@@ -151,7 +151,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     fun writeGameToDB(slovo: Slovo){
         Completable.create { emitter ->
-            db.userDao().insertAll(slovo)
+            db.slovoDao().insertAll(slovo)
             emitter.onComplete()}
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.newThread())
@@ -167,7 +167,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     fun readStatistic(callback: (List<Slovo>)->(Unit)){
         BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
-            val games = db.userDao().getPlayedGames()
+            val games = db.slovoDao().getPlayedGames()
             emitter.onNext(games)
         }.hide()
             .observeOn(Schedulers.io())
@@ -182,7 +182,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     fun checkSlovo(word: String, callback: (Boolean)->(Unit)){
         BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
-            val games = db.userDao().checkSlovo(word)
+            val games = db.slovoDao().checkSlovo(word)
             emitter.onNext(games)
         }.hide()
             .observeOn(Schedulers.io())
@@ -198,7 +198,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
 
     fun readGames(callback: (List<Slovo>)->(Unit)){
         BehaviorSubject.create { emitter: ObservableEmitter<List<Slovo>> ->
-            val games = db.userDao().getAll()
+            val games = db.slovoDao().getAll()
             emitter.onNext(games)
         }.hide()
             .observeOn(Schedulers.io())
@@ -240,7 +240,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
             Slovo(slovo,level, 0, 0, false) }.toTypedArray()
 
         Observable.fromCallable {
-            db.userDao().insertAll(*slovos)
+            db.slovoDao().insertAll(*slovos)
         }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
