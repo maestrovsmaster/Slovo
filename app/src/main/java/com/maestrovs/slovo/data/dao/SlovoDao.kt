@@ -1,4 +1,4 @@
-package com.maestrovs.slovo.data
+package com.maestrovs.slovo.data.dao
 
 import androidx.room.Dao
 import androidx.room.Insert

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.maestrovs.slovo.R
 import com.maestrovs.slovo.databinding.ActivityMainBinding
@@ -20,11 +21,11 @@ class MainActivity : BaseActivity(){
     private lateinit var binding: ActivityMainBinding
 
 
-    private val mainScreenViewModel by lazy {
+    private val mainScreenViewModel : MainViewModel by viewModels()/*by lazy {
         ViewModelProvider(this).get(MainViewModel::class.java).apply {
             lifecycle.addObserver(this)
         }
-    }
+    }*/
 
 
 

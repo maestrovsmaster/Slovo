@@ -9,52 +9,39 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.*
-import android.view.animation.AnimationUtils
-import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.maestrovs.slovo.R
 import com.maestrovs.slovo.components.KeyboardProtocol
-import com.maestrovs.slovo.components.OpenStatus
-import com.maestrovs.slovo.data.Slovo
+import com.maestrovs.slovo.components.UITilesRow
 import com.maestrovs.slovo.databinding.FragmentMainScreenBinding
 import com.maestrovs.slovo.model.Key
-import com.maestrovs.slovo.model.KeyType
 import com.maestrovs.slovo.model.KeyUI
-import com.maestrovs.slovo.model.isMoreWeight
 import com.maestrovs.slovo.screens.MainActivity
-import com.maestrovs.slovo.screens.MainViewModel
 import com.maestrovs.slovo.screens.about.AboutAppBottomSheetDialogFragment
 import com.maestrovs.slovo.screens.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
+class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
 
-class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
-
-    // var db: AppDatabase? = null
-
-
-    private val mainScreenViewModel by lazy {
-        ViewModelProvider(activity as MainActivity).get(MainViewModel::class.java).apply {
+    private val mainScreenViewModel: GameViewModel by lazy {
+        ViewModelProvider(activity as MainActivity).get(GameViewModel::class.java).apply {
             lifecycle.addObserver(this)
         }
     }
 
-    var rows: MutableList<com.maestrovs.slovo.components.UITilesRow> = mutableListOf()
+    private val gameManager by lazy {
+        GameManager(requireContext(), mainScreenViewModel, this)
+    }
+
 
     private var _binding: FragmentMainScreenBinding? = null
     private val binding get() = _binding!!
     lateinit var mainActivity: MainActivity
 
-
-    var gameNum = 0
-
-
-    var slovo = "ПОШТА"
-    var step = 0
-    var lastStep = 5
-    val keyboardKeys: MutableList<Key> = mutableListOf()
-    var currentRow: com.maestrovs.slovo.components.UITilesRow? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -65,9 +52,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
         mainScreenViewModel.navController = findNavController()
         _binding = FragmentMainScreenBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        // applyFont(requireContext(), root, "fonts/Comfortaa-Regular.ttf")
 
-        //  binding.btMenuShipments onClick mainScreenViewModel.onShipments()
         binding.gameSmile.visibility = View.GONE
 
         val myString = "#слово"
@@ -79,8 +64,6 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
         binding.title.text = spannableString
 
         binding.statistic.setOnClickListener {
-            // val games = db!!.userDao().getAll()
-            Log.d("Game", "games..")
             mainScreenViewModel.readStatistic {
                 Log.d("Game", "games: $it")
             }
@@ -88,7 +71,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
         }
 
         binding.webViewBt.setOnClickListener {
-            slovo.let {
+            gameManager.slovo.let {
                 findNavController().navigate(
                     MainScreenFragmentDirections.actionFragmentMainScreenToWebViewFragment(
                         it
@@ -98,15 +81,22 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
         }
 
         binding.about.setOnClickListener {
-
             showAboutAppDialog()
-
             //  findNavController().navigate(MainScreenFragmentDirections.actionFragmentMainScreenToAboutFragment())
         }
 
         binding.nextBt.setOnClickListener {
-            nextGame()
+            binding.gameSmile.visibility = View.GONE
+            gameManager.nextGame()
         }
+
+        binding.keyboard.delegate = object : KeyboardProtocol {
+            override fun onKey(keyUI: KeyUI) {
+                gameManager.setKeyUI(keyUI)
+            }
+        }
+
+
         binding.webViewBt.visibility = View.GONE
         binding.nextBt.visibility = View.GONE
 
@@ -119,15 +109,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
         val bottomSheetFragment = AboutAppBottomSheetDialogFragment()
         bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
 
-        /*  val dialog = Dialog(requireContext(), R.style.DialogStyle)
-          dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-          dialog.setCancelable(true)
-          dialog.setContentView(R.layout.fragment_about)
-          val window = dialog.window!!
-          window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-          window.setGravity(Gravity.BOTTOM)
-          window.decorView.setBackgroundResource(android.R.color.transparent)
-          dialog.show()*/
+        gameManager.init()
     }
 
 
@@ -135,243 +117,8 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
         super.onViewCreated(view, savedInstanceState)
         mainActivity = activity as MainActivity
 
-        // Log.d("Game","onViewCreatedSavedSlovo = ${mainScreenViewModel.readLastSlovo()}")
-        //Log.d("Game","onViewCreatedSavedWords = ${mainScreenViewModel.readLastWords()}")
-        mainScreenViewModel.restoreSlovo()
-
-        keyboardKeys.clear()
-
-        initRows()
-
-        nextGame()
-
-        binding.keyboard.delegate = object : KeyboardProtocol {
-            override fun onKey(keyUI: KeyUI) {
-
-                when (keyUI.type) {
-                    KeyType.Letter -> currentRow?.addKey(keyUI.key)
-                    KeyType.Enter -> {
-                        val usersEntered = currentRow?.getUserWord() ?: ""
-                        Log.d("Game", "Check users word: $usersEntered")
-                        mainScreenViewModel.checkSlovo(usersEntered) { correct ->
-                            Log.d("Game", "Check users correct: $correct")
-                            if (correct) {
-                                val status = currentRow?.openSlovo()
-                                Log.d("Game", "Statuss=$status")
-                                processGameStatus(status!!)
-                            } else {
-                                showWrongWordAnim()
-                            }
-                        }
-
-                    }
-
-                    KeyType.Backspace -> {
-                        currentRow?.removeLast()
-                    }
-                }
-            }
-        }
-    }
-
-
-    fun processGameStatus(status: OpenStatus) {
-
-        when (status) {
-            OpenStatus.Win -> {
-                mainScreenViewModel.updateSlovoStepInDB(Slovo(slovo, null,step + 1, 0, false))
-                showWin()
-            }
-
-            OpenStatus.Game -> {
-
-                val lastWord = currentRow?.getUserWord()
-                lastWord?.let {
-                    mainScreenViewModel.saveAddUserWord(it)
-                }
-
-                Log.d(
-                    "Game",
-                    "lastWord = $lastWord   slovo=$slovo step =$step lastStep = $lastStep"
-                )
-
-                val nextKeys = currentRow?.getKeyboardActualKeys()
-                if (canNext()) {
-                    nextStep()
-                    addKeysToExists(nextKeys ?: mutableListOf())
-                    binding.keyboard.updateKeys(keyboardKeys)
-                } else {
-                    //Fail
-                    if (step >= 0) {
-                        step = -1 //Можна повторну спробу вгадати слово
-                    } else {
-                        step = -2 //Немає більше спроб вгадати слово
-                    }
-                    mainScreenViewModel.updateSlovoStepInDB(Slovo(slovo, null,step, 0, false))
-                    showFail()
-                }
-            }
-
-            OpenStatus.WrongWord -> {
-                //покажем анімашку, що хибне слово
-                showWrongWordAnim()
-            }
-
-            OpenStatus.NoComplete -> {
-                // покажем анімашку пусті клітини
-                currentRow?.showNotCompleteTiles()
-            }
-        }
-    }
-
-
-    fun initRows() {
-        rows.clear()
-        rows.add(binding.word1)
-        rows.add(binding.word2)
-        rows.add(binding.word3)
-        rows.add(binding.word4)
-        rows.add(binding.word5)
-        rows.add(binding.word6)
-        rows.add(binding.word7)
-    }
-
-
-    fun addKeysToExists(adds: List<Key>) {
-
-
-        adds.map { letter ->
-            Log.d("KeysKL", "letter = $letter")
-
-            var curentLetter = letter
-
-            val sameLs = adds.filter { ds -> ds.value == letter.value }
-            Log.d("KeysKL", "sameLs = $sameLs")
-            sameLs.map { same ->
-                if (same.state.isMoreWeight(curentLetter.state)) {
-                    curentLetter = same
-                }
-            }
-
-            if (!keyboardKeys.contains(curentLetter)) {
-                Log.d("KeysKL", "add + $curentLetter")
-                keyboardKeys.add(curentLetter)
-            } else {
-                var curentLetter2 = curentLetter
-                val sameLs = keyboardKeys.filter { ds -> ds.value == curentLetter.value }
-                if (sameLs.isNotEmpty()) {
-                    if (sameLs[0].state.isMoreWeight(curentLetter2.state)) {
-                        curentLetter2 = sameLs[0]
-                    } else {
-                    }
-                } else {
-                    //Nothing
-                }
-                keyboardKeys.add(curentLetter2)
-            }
-        }
-    }
-
-    fun nextGame() {
-
-        binding.gameSmile.visibility = View.GONE
-
-        mainScreenViewModel.selectRandomSlovo { sl, savedSteps ->
-            slovo = sl.slovo ?: "СЛОВО"
-            Log.d("Game", "RandomSlovo = $sl")
-            Log.d("Game", "SavedSteps = $savedSteps")
-            //
-
-            resetGame()
-            currentRow!!.slovo = slovo
-            mainScreenViewModel.saveCurrentSlovo(slovo)
-            gameNum += 1
-            if (!savedSteps.isNullOrEmpty()) {
-                restoreGame(savedSteps)
-
-            }
-        }
-    }
-
-    fun restoreGame(words: List<String>) {
-        resetGame()
-        currentRow!!.slovo = slovo
-        words.map {
-            val status = currentRow!!.forceOpenSlovo(it)
-            processGameStatus(status)
-        }
-    }
-
-
-    private fun nextStep() {
-        step += 1
-        currentRow = rows[step]!!
-        currentRow!!.slovo = slovo
-
-    }
-
-    private fun canNext(): Boolean {
-        return step < lastStep
-    }
-
-    fun resetGame() {
-        step = 0
-        binding.gameSmile.visibility = View.GONE
-        binding.webViewBt.visibility = View.GONE
-        binding.nextBt.visibility = View.GONE
-        mainScreenViewModel.resetSavedGame()
-        keyboardKeys.clear()
-        binding.keyboard.resetKeys()
-        rows.map {
-            it.slovo = ""
-            it.clearSlovo()
-        }
-        currentRow = rows[0]
-    }
-
-    val ngDelay = 1000L
-
-    fun showWin() {
-
-        mainScreenViewModel.resetSavedGame()
-        Handler(Looper.getMainLooper()).postDelayed({
-            /*binding.nextBt.visibility = View.VISIBLE
-            binding.webViewBt.visibility = View.VISIBLE
-            binding.gameSmile.visibility = View.VISIBLE
-            binding.gameSmile.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.smile_glad_green));*/
-            findNavController().navigate(
-                MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(
-                    slovo,
-                    true
-                )
-            )
-
-        }, ngDelay)
-
-    }
-
-    fun showFail() {
-
-        mainScreenViewModel.resetSavedGame()
-        Handler(Looper.getMainLooper()).postDelayed({
-            /*  binding.nextBt.visibility = View.VISIBLE
-              binding.webViewBt.visibility = View.VISIBLE
-              binding.gameSmile.visibility = View.VISIBLE
-              binding.gameSmile.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.smile_sad));*/
-            findNavController().navigate(
-                MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(
-                    slovo,
-                    false
-                )
-            )
-        }, ngDelay)
-    }
-
-    fun showWrongWordAnim() {
-        currentRow?.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.shake))
-        // val v = requireActivity().getSystemService(Context.VIBRATOR_SERVICE) as Vibrator?
-        //v!!.vibrate(300)
-        Toast.makeText(requireContext(), "Такого слова в грі немає", Toast.LENGTH_SHORT).show()
+        gameManager.init()
+        gameManager.nextGame()
     }
 
 
@@ -385,9 +132,6 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // binding.clMessage.animate().cancel()
-
-        // mainScreenViewModel.savedSlovo = slovo
         _binding = null
     }
 
@@ -395,11 +139,87 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>> {
     override fun onChanged(t: List<Any>?) {
     }
 
+    override fun initRows(rows: MutableList<UITilesRow>): MutableList<UITilesRow> {
+        rows.clear()
+        rows.add(binding.word1)
+        rows.add(binding.word2)
+        rows.add(binding.word3)
+        rows.add(binding.word4)
+        rows.add(binding.word5)
+        rows.add(binding.word6)
+        rows.add(binding.word7)
+        return rows
+    }
 
-    /* onBackPressed(): Boolean {
-        showCancelReservationActionForBack()
-        return true
-    }*/
+    override fun updateKeyboard(keyboardKeys: MutableList<Key>) {
+        binding.keyboard.updateKeys(keyboardKeys)
+    }
+
+    override fun showWrongWordAnimation() {
+        //Nothing
+    }
+
+    override fun resetGame() {
+        binding.gameSmile.visibility = View.GONE
+        binding.webViewBt.visibility = View.GONE
+        binding.nextBt.visibility = View.GONE
+        binding.keyboard.resetKeys()
+    }
+
+    val ngDelay = 1000L
+
+    override fun showWin() {
+        mainScreenViewModel.resetSavedGame()
+        Handler(Looper.getMainLooper()).postDelayed({
+
+            findNavController().navigate(
+                MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(
+                    gameManager.slovo,
+                    true
+                )
+            )
+
+        }, ngDelay)
+    }
+
+    override fun showFail() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            findNavController().navigate(
+                MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(
+                    gameManager.slovo,
+                    false
+                )
+            )
+        }, ngDelay)
+    }
+
+    private fun smileWin() {
+        binding.nextBt.visibility = View.VISIBLE
+        binding.webViewBt.visibility = View.VISIBLE
+        binding.gameSmile.visibility = View.VISIBLE
+        binding.gameSmile.setImageDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.smile_glad_green
+            )
+        )
+    }
+
+    private fun smileLost() {
+        binding.nextBt.visibility = View.VISIBLE
+        binding.webViewBt.visibility = View.VISIBLE
+        binding.gameSmile.visibility = View.VISIBLE
+        binding.gameSmile.setImageDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.smile_sad
+            )
+        )
+    }
+
+    override fun showNotComplete() {
+        //Nothing
+    }
 
 
 }

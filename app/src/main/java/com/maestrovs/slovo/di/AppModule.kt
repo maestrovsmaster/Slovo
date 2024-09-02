@@ -1,9 +1,13 @@
-package com.maestrovs.slovo.data.repository
+package com.maestrovs.slovo.di
 
+import android.content.Context
 import com.google.gson.GsonBuilder
+import com.maestrovs.slovo.data.repository.MainRemoteData
+import com.maestrovs.slovo.data.repository.MainService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -15,6 +19,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+   /* @Provides
+    @Singleton
+    @ApplicationContext
+    fun provideApplicationContext(context: Context): Context = context*/
 
     @Provides
     fun providesBaseUrl() : String = "http://sum.in.ua/"
