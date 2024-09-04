@@ -7,8 +7,14 @@ import androidx.room.Query
 @Dao
 interface AttemptDao {
     @Insert
-    suspend fun insertAttempt(attempt: Attempt): Long
+     fun insertAttempt(attempt: Attempt): Long
 
-    @Query("SELECT * FROM Attempt WHERE gameId = :gameId")
-    suspend fun getAttemptsForGame(gameId: Int): List<Attempt>
+
+
+    @Query("""
+        SELECT * FROM Attempt 
+        WHERE slovoId = :slovoId
+        ORDER BY id ASC
+    """)
+    suspend fun getAttemptsForGame(slovoId: String): List<Attempt>
 }

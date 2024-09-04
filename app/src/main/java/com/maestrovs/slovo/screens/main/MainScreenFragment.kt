@@ -9,6 +9,7 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.*
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -64,9 +65,9 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
         binding.title.text = spannableString
 
         binding.statistic.setOnClickListener {
-            mainScreenViewModel.readStatistic {
-                Log.d("Game", "games: $it")
-            }
+           // mainScreenViewModel.readStatistic {
+           //     Log.d("Game", "games: $it")
+           // }
             //
         }
 
@@ -74,7 +75,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
             gameManager.slovo.let {
                 findNavController().navigate(
                     MainScreenFragmentDirections.actionFragmentMainScreenToWebViewFragment(
-                        it
+                        it.slovo
                     )
                 )
             }
@@ -124,9 +125,6 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
 
     override fun onResume() {
         super.onResume()
-
-        Log.d("Game", "SavedSlovo = ${mainScreenViewModel.readLastSlovo()}")
-        Log.d("Game", "SavedWords = ${mainScreenViewModel.readLastWords()}")
     }
 
 
@@ -157,6 +155,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
 
     override fun showWrongWordAnimation() {
         //Nothing
+        Toast.makeText(context, "Такого слова в грі немає", Toast.LENGTH_SHORT).show()
     }
 
     override fun resetGame() {
@@ -169,12 +168,12 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
     val ngDelay = 1000L
 
     override fun showWin() {
-        mainScreenViewModel.resetSavedGame()
+       // mainScreenViewModel.resetSavedGame()
         Handler(Looper.getMainLooper()).postDelayed({
 
             findNavController().navigate(
                 MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(
-                    gameManager.slovo,
+                    gameManager.slovo.slovo,
                     true
                 )
             )
@@ -186,7 +185,7 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(
                 MainScreenFragmentDirections.actionFragmentMainScreenToGameEndFragment(
-                    gameManager.slovo,
+                    gameManager.slovo.slovo,
                     false
                 )
             )

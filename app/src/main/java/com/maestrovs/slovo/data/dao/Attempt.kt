@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
 @Entity(
     foreignKeys = [ForeignKey(
         entity = Game::class,
-        parentColumns = ["id"],
-        childColumns = ["gameId"],
+        parentColumns = ["slovo"],
+        childColumns = ["slovoId"],
         onDelete = ForeignKey.CASCADE
     )]
 )
@@ -17,7 +17,7 @@ data class Attempt(
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
 
-    @ColumnInfo(name = "gameId") val gameId: Int,
-    @ColumnInfo(name = "attemptId") val attemptId: Int,
+    @ColumnInfo(name = "slovoId") val slovoId: String,
+    @ColumnInfo(name = "step") val step: Int,
     @ColumnInfo(name = "attempt") val attempt: String?
 )

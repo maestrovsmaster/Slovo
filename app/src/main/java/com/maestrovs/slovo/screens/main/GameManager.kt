@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.maestrovs.slovo.R
 import com.maestrovs.slovo.components.OpenStatus
 import com.maestrovs.slovo.data.dao.Slovo
+import com.maestrovs.slovo.model.GameResult
 import com.maestrovs.slovo.model.Key
 import com.maestrovs.slovo.model.KeyType
 import com.maestrovs.slovo.model.KeyUI
@@ -14,12 +15,12 @@ import com.maestrovs.slovo.model.isMoreWeight
 
 class GameManager(
     private val context: Context,
-    private val mainScreenViewModel: GameViewModel,
+    private val gameViewModel: GameViewModel,
     private val gameInterface: GameInterface
 ) {
 
-    private var _slovo = "ПОШТА"
-    val slovo: String
+    private var _slovo = Slovo("ПОШТА",1)
+    val slovo: Slovo
         get() = _slovo
 
     private var gameNum = 0
@@ -32,7 +33,6 @@ class GameManager(
 
 
     fun init() {
-        mainScreenViewModel.restoreSlovo()
         keyboardKeys.clear()
         keyboardKeys.clear()
         initRows()
@@ -40,15 +40,15 @@ class GameManager(
 
     fun nextGame() {
 
-        mainScreenViewModel.selectRandomSlovo { sl, savedSteps ->
-            _slovo = sl.slovo ?: "СЛОВО"
+        gameViewModel.selectRandomSlovo { sl, savedSteps ->
+            _slovo = sl
             Log.d("Game", "RandomSlovo = $sl")
             Log.d("Game", "SavedSteps = $savedSteps")
             //
 
             resetGame()
-            currentRow!!.slovo = slovo
-            mainScreenViewModel.saveCurrentSlovo(slovo)
+            gameViewModel.registerGameToDB(slovo)
+            currentRow!!.slovo = slovo.slovo
             gameNum += 1
             if (!savedSteps.isNullOrEmpty()) {
                 restoreGame(savedSteps)
@@ -63,13 +63,17 @@ class GameManager(
             KeyType.Letter -> currentRow?.addKey(keyUI.key)
             KeyType.Enter -> {
                 val usersEntered = currentRow?.getUserWord() ?: ""
-                mainScreenViewModel.checkSlovo(usersEntered) { correct ->
-                    if (correct) {
-                        val status = currentRow?.openSlovo()
-                        processGameStatus(status!!)
-                    } else {
-                        gameInterface.showWrongWordAnimation()
+                if(currentRow?.isComplete() == true) {
+                    gameViewModel.checkSlovo(usersEntered) { correct ->
+                        if (correct) {
+                            val status = currentRow?.openSlovo()
+                            processGameStatus(status!!, usersEntered)
+                        } else {
+                            showWrongWord()
+                        }
                     }
+                }else{
+                    showNotCompleteWord()
                 }
             }
 
@@ -85,28 +89,37 @@ class GameManager(
     }
 
 
-    private fun processGameStatus(status: OpenStatus) {
+    private fun processGameStatus(status: OpenStatus, userEntered: String? = null) {
+
+        Log.d(
+            "Game",
+            "status =$status   lastWord = $userEntered   slovo=$slovo step =$step lastStep = $lastStep"
+        )
 
         when (status) {
+            OpenStatus.Win, OpenStatus.Game ->{
+                userEntered?.let {
+                    gameViewModel.writeAttemptToDB(slovo.slovo, step = step, word = userEntered)
+                }
+            }
+
+            else -> {}
+        }
+
+        when (status) {
+
+
+
             OpenStatus.Win -> {
-                mainScreenViewModel.updateSlovoStepInDB(Slovo(slovo, null, step + 1, 0, false))
+                gameViewModel.updateGameToDB(slovo, GameResult.WIN)
                 showWin()
             }
 
             OpenStatus.Game -> {
 
-                val lastWord = currentRow?.getUserWord()
-                lastWord?.let {
-                    mainScreenViewModel.saveAddUserWord(it)
-                }
-
-                Log.d(
-                    "Game",
-                    "lastWord = $lastWord   slovo=$slovo step =$step lastStep = $lastStep"
-                )
-
                 val nextKeys = currentRow?.getKeyboardActualKeys()
                 if (canNext()) {
+
                     nextStep()
                     addKeysToExists(nextKeys ?: mutableListOf())
 
@@ -118,7 +131,9 @@ class GameManager(
                     } else {
                         step = -2 //Немає більше спроб вгадати слово
                     }
-                    mainScreenViewModel.updateSlovoStepInDB(Slovo(slovo, null, step, 0, false))
+                    //gameViewModel.updateSlovoStepInDB(Slovo(slovo, null, step, 0, false))
+                    gameViewModel.updateGameToDB(slovo, GameResult.LOSE)
+
                     showFail()
                 }
             }
@@ -131,16 +146,29 @@ class GameManager(
                         R.anim.shake
                     )
                 )
-                Toast.makeText(context, "Такого слова в грі немає", Toast.LENGTH_SHORT).show()
-                gameInterface.showWrongWordAnimation()
+
+                showWrongWord()
             }
 
             OpenStatus.NoComplete -> {
-                // покажем анімашку пусті клітини
-                currentRow?.showNotCompleteTiles()
-                gameInterface.showNotComplete()
+                showNotCompleteWord()
             }
         }
+    }
+
+    private fun showNotCompleteWord(){
+        currentRow?.showNotCompleteTiles()
+        gameInterface.showNotComplete()
+    }
+
+    private fun showWrongWord(){
+        currentRow?.startAnimation(
+            AnimationUtils.loadAnimation(
+                context,
+                R.anim.shake
+            )
+        )
+        gameInterface.showWrongWordAnimation()
     }
 
     private fun addKeysToExists(adds: List<Key>) {
@@ -176,7 +204,7 @@ class GameManager(
 
     private fun restoreGame(words: List<String>) {
         resetGame()
-        currentRow!!.slovo = slovo
+        currentRow!!.slovo = slovo.slovo
         words.map {
             val status = currentRow!!.forceOpenSlovo(it)
             processGameStatus(status)
@@ -185,9 +213,11 @@ class GameManager(
 
 
     private fun nextStep() {
+
         step += 1
-        currentRow = rows[step]!!
-        currentRow!!.slovo = slovo
+        currentRow = rows[step]
+        currentRow!!.slovo = slovo.slovo
+
 
     }
 
@@ -201,7 +231,7 @@ class GameManager(
 
         step = 0
 
-        mainScreenViewModel.resetSavedGame()
+       // gameViewModel.resetSavedGame()
         keyboardKeys.clear()
 
         rows.map {
@@ -220,7 +250,7 @@ class GameManager(
 
     private fun showFail() {
 
-        mainScreenViewModel.resetSavedGame()
+       // gameViewModel.resetSavedGame()
 
         gameInterface.showFail()
 

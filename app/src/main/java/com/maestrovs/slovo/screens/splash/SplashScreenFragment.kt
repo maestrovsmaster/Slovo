@@ -60,10 +60,7 @@ class SplashScreenFragment : BaseFragment() {
                 mainScreenViewModel.readDictionary { dic ->
                     var totalCnt = dic.size
                     binding.dicProgress.max = totalCnt
-                    mainScreenViewModel.writeDictionaryToDB(dic, { progress ->
-                        // Log.d("Game", "Progress = $progress")
-                        binding.dicProgress.progress = progress
-                    },
+                    mainScreenViewModel.writeDictionaryToDB(dic,
                         {
                             launchGame(false)
                         })
