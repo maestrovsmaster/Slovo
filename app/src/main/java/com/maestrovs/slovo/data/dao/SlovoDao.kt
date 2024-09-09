@@ -12,16 +12,6 @@ interface SlovoDao {
     @Query("SELECT COUNT(*) FROM slovo")
     suspend fun getGamesCount(): Int
 
-   // @Query("SELECT * FROM slovo WHERE slovo.step = 0 ORDER BY RANDOM() LIMIT 1")
-   // fun getRandomSlovo():List<Slovo>
-
-
-    //@Query("UPDATE slovo SET step=:step WHERE slovo = :slovo")
-    //fun updateSlovoStep(slovo: String, step: Int)
-
-    //@Query("SELECT * FROM slovo WHERE step != 0")
-    //fun getPlayedGames(): List<Slovo>
-
     @Query("SELECT * FROM slovo WHERE slovo = :slovo")
     suspend fun checkSlovo(slovo: String): List<Slovo>
 
