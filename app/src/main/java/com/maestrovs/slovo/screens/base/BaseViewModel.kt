@@ -1,6 +1,7 @@
 package com.maestrovs.slovo.screens.base
 
 import android.app.Application
+import android.content.Context
 import android.location.Location
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LifecycleObserver
@@ -16,6 +17,10 @@ const val KEY_TOKEN_EXPIRED = "401"
 
 open class BaseViewModel(application: Application) : AndroidViewModel(application),
     LifecycleObserver {
+
+    internal val message = MutableLiveData<String>()
+
+    var context: Context = application.applicationContext
 
 
     protected val disposable = CompositeDisposable()

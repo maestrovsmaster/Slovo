@@ -88,12 +88,15 @@ class UITilesRow : FrameLayout {
     private val animStep = 100
 
 
+    fun isComplete(): Boolean {
+        return keys.size == 5
+    }
 
     /**
      * Return actual keys for mark
      */
     fun openSlovo(): OpenStatus {
-        if (keys.size == 5) {
+        if (isComplete()) {
             if(WordInspector.isWordWrong(getUserWord())){
                 return OpenStatus.WrongWord
             }else {

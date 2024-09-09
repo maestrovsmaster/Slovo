@@ -26,7 +26,11 @@ class WebViewViewModel @Inject constructor(
     fun getSlovo(slovo: String, callback: (String) -> (Unit)) {
         var result: String = ""
         BehaviorSubject.create { emitter: ObservableEmitter<String> ->
-            val doc = Jsoup.connect("http://sum.in.ua/?swrd=$slovo").get()
+            //val doc0 = Jsoup.connect("http://sum.in.ua/?swrd=$slovo").get()
+            val translittedSlovo = translitUkrToLat(slovo.lowercase())
+            val url = "https://sum.in.ua/s/$translittedSlovo"
+            Log.d("Game", "dicturl = ${url}")
+            val doc = Jsoup.connect(url).get()
             val article: Element? = doc.getElementById("article")
             emitter.onNext(article?.text() ?: "")
         }.hide()
