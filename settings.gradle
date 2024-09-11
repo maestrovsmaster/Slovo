@@ -7,7 +7,7 @@ pluginManagement {
 
     plugins {
         id("androidx.navigation.safeargs.kotlin")
-        id 'org.jetbrains.kotlin.android' version '1.6.10'
+        id 'org.jetbrains.kotlin.android' version '1.6.21'
     }
 
 
