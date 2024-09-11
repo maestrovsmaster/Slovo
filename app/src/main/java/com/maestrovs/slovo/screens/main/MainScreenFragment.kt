@@ -133,9 +133,9 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
         _binding = null
     }
 
-
-    override fun onChanged(t: List<Any>?) {
+    override fun onChanged(value: List<Any>) {
     }
+
 
     override fun initRows(rows: MutableList<UITilesRow>): MutableList<UITilesRow> {
         rows.clear()
@@ -219,6 +219,8 @@ class MainScreenFragment : BaseFragment(), Observer<List<Any>>, GameInterface {
     override fun showNotComplete() {
         //Nothing
     }
+
+
 
 
 }
